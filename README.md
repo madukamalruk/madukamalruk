@@ -12,7 +12,7 @@
   <a href="https://www.linkedin.com/in/maduka-malruk">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn" />
   </a>
-  <a href="mailto:your.email@example.com">
+  <a href="madukageeganage@gmail.com">
     <img src="https://img.shields.io/badge/Email-Contact_Me-red?style=for-the-badge&logo=gmail" alt="Email" />
   </a>
 </p>
@@ -21,7 +21,7 @@
 
 ### 🚀 What I Do
 * **Micromouse & Robotics:** Proud member of **Team MazeRiders** 🐭 working on PID-based maze solving algorithms.
-* **IoT & Embedded Systems:** Building real-world security solutions like the **IoT Hidden Camera Detector** using Raspberry Pi 4.
+* **IoT & Embedded Systems:** Building real-world security solutions like the **IoT project on SLIoT Challenge** using Raspberry Pi 4.
 * **Engineering Math:** Solving complex linear algebra and control systems problems.
 
 ---
