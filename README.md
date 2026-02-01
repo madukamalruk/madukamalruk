@@ -5,7 +5,7 @@
 </h3>
 
 <p align="center">
-  <b>AI & Robotics Enthusiast | Control Systems | IoT Developer</b>
+  <b>AI & Robotics Enthusiast | IoT Developer</b>
 </p>
 
 <p align="center">
