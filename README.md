@@ -25,8 +25,7 @@
 * **Engineering Math:** Solving complex linear algebra and control systems problems.
 
  ### 🌱 Projects in Progress
-- **IoT Hidden Camera Detector:** Built on Raspberry Pi 4.
-- **MazeMaster 2026:** Advanced maze-solving algorithms.
+- **MazeMaster 2026:**  Maze-solving robot devolpment.
 
 ### 📫 Reach Me
 - **LinkedIn:** [Maduka Malruk](https://www.linkedin.com/in/maduka-malruk)
