@@ -92,11 +92,16 @@ I turn engineering insights into scalable architectures, embedded systems, and r
 <br>
 
 <div align="center">
-  <!-- Streak Stats -->
-  <img width="48%" src="https://streak-stats.demolab.com?user=madukamalruk&theme=synthwave&hide_border=true&background=0D1117" alt="streak stats"/>
-  
-  <!-- Top Languages Stats -->
+  <!-- GitHub Stats & Top Languages -->
+  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=madukamalruk&show_icons=true&theme=synthwave&hide_border=true&bg_color=0D1117" alt="github stats"/>
   <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=madukamalruk&layout=compact&theme=synthwave&hide_border=true&bg_color=0D1117&size_weight=0.5&count_weight=0.5" alt="top langs" />
+</div>
+
+<br>
+
+<div align="center">
+  <!-- Streak Stats -->
+  <img src="https://streak-stats.demolab.com?user=madukamalruk&theme=synthwave&hide_border=true&background=0D1117" alt="streak stats"/>
 </div>
 
 <br/><br/>
@@ -133,3 +138,8 @@ public:
     }
 };
 ```
+
+<br>
+
+<!-- Footer Banner -->
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,15&height=100&section=footer" width="100%"/>
