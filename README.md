@@ -3,6 +3,12 @@
 
 <br/>
 
+<!-- Running Pet Animation -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Cat.png" alt="Cat" width="50" height="50" />
+  <img src="https://media.giphy.com/media/hSj1sT5mKzBfX39J5C/giphy.gif" alt="running" width="50" style="margin-left: -15px;" />
+</div>
+
 <!-- Animated Typing Header -->
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Space+Grotesk&weight=600&size=35&center=true&vCenter=true&width=600&height=70&duration=4000&color=00E5FF&lines=Welcome+Aboard!+👋;+I'm+Maduka+Malruk!;+Electrical+Engineer+⚡;+Robotics+Enthusiast+🤖" />
@@ -12,7 +18,7 @@
 
 <br/>
 
-<!-- GitHub Trophies (Shows dynamically based on your GitHub activity) -->
+<!-- GitHub Trophies -->
 <div align="center">
   <a href="https://github.com/ryo-ma/github-profile-trophy">
     <img src="https://github-profile-trophy.vercel.app/?username=madukamalruk&theme=radical&no-frame=true&no-bg=true&margin-w=15" />
@@ -55,7 +61,7 @@
 <h2 align="center">⚒️ Languages, Frameworks & Tools ⚒️</h2>
 <br/>
 <div align="center">
-    <!-- Skill Icons (Beautiful rounded icons) -->
+    <!-- Skill Icons -->
     <a href="https://skillicons.dev">
       <img src="https://skillicons.dev/icons?i=cpp,c,python,arduino,raspberrypi,matlab,linux,git,github,vscode,figma&theme=dark" />
     </a>
@@ -63,6 +69,16 @@
     <a href="https://skillicons.dev">
       <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,mysql,docker,idea&theme=dark" />
     </a>
+</div>
+
+<br/>
+<hr/>
+
+<div align="center">
+  <h2>🚀 Coding Activity (WakaTime) 🚀</h2>
+  <br>
+  <!-- NOTE: You need to link your WakaTime account to a GitHub action to make this update automatically, or replace 'madukamalruk' with your wakatime username if public -->
+  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=madukamalruk&theme=synthwave&hide_border=true&bg_color=0D1117" alt="WakaTime status" />
 </div>
 
 <br/>
@@ -112,7 +128,7 @@
 <br/><br/>
 <hr/>
 
-<!-- Cool animated GIF at the bottom -->
+<!-- Console / Terminal Animation at the bottom -->
 <p align="center">
-  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="robot waving" width="200" />
+  <img src="https://raw.githubusercontent.com/kyeotic/kyeotic/master/terminal.gif" alt="animated terminal console" width="600" style="border-radius: 10px;"/>
 </p>
