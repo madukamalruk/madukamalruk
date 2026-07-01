@@ -118,7 +118,7 @@ I turn engineering insights into scalable architectures, embedded systems, and r
 
 <!-- Console Block at the bottom -->
 <div align="center">
-  <img src="animated-console.svg" width="100%" />
+  <img src="animated-terminal.svg" width="100%" />
 </div>
 
 <br>
