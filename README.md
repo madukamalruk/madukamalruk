@@ -3,10 +3,11 @@
   <img src="https://visitor-badge.laobi.icu/badge?page_id=madukamalruk.madukamalruk&left_color=0D1117&right_color=00e5ff&left_text=Visitors" />
 </div>
 
-<!-- Neon Dot-Matrix Running Cat -->
-<marquee scrollamount="8" behavior="scroll" direction="left" width="100%">
-  <img src="https://raw.githubusercontent.com/aungmoe/aungmoe/master/assets/images/nyan-cat.gif" width="100" alt="Running Cat" />
-</marquee>
+<!-- Running Pet Animation -->
+<div align="center">
+  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Cat.png" alt="Cat" width="50" height="50" />
+  <img src="https://media.giphy.com/media/hSj1sT5mKzBfX39J5C/giphy.gif" alt="running" width="50" style="margin-left: -15px;" />
+</div>
 
 <div align="center">
   <!-- Gradient Wavy Header -->
@@ -24,30 +25,16 @@
 
 <br/>
 
-<!-- GitHub Trophies -->
-<div align="center">
-  <a href="https://github.com/ryo-ma/github-profile-trophy">
-    <img src="https://github-profile-trophy.vercel.app/?username=madukamalruk&theme=radical&no-frame=true&no-bg=true&margin-w=15" />
-  </a>
-</div>
+### ⚡ About Me
 
-<br/>
+I turn engineering insights into scalable architectures, embedded systems, and robust robotics solutions. Currently pursuing my BSc (Hons) in Electrical Engineering at the **University of Moratuwa**.
 
-<!-- Emoji Bio -->
-<div align="center">
+- 🔭 **Current Focus:** Micromouse Project (Team MazeRiders) & MazeMaster 2026.
+- ⚙️ **Interests:** Robotics, Embedded Systems, PCB Design, and Software Architecture.
+- 🏆 **Community:** Active member of the Electrical Engineering Society (EESoc).
+- 🌐 **Portfolio:** [portfolio-virid-eight-31.vercel.app](https://portfolio-virid-eight-31.vercel.app/)
+- 📫 **Contact:** madukageeganage@gmail.com
 
- 👨🏼🎓 Studying **BSc (Hons) in Electrical Engineering at University of Moratuwa**
- 
- 🐭 I’m currently working on **Micromouse (Team MazeRiders) & MazeMaster 2026**
- 
- 🌱 I’m currently learning **Advanced Control Systems & ROS**
-
- 💬 Ask me about **C/C++, Python, Arduino, PCB Design... or anything [here](https://github.com/madukamalruk)**
-
- ⚡ Fun fact **The word "robot" comes from the Czech word "robota", which translates to "forced labor" and was first used in a 1920 play!**
-
-</div>
- 
 <br/>
 
 <!-- Contact Badges -->
@@ -76,16 +63,6 @@
     <a href="https://skillicons.dev">
       <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,mysql,docker,idea&theme=dark" />
     </a>
-</div>
-
-<br/>
-<hr/>
-
-<!-- Coding Activity -->
-<div align="center">
-  <h2>🚀 Coding Activity (WakaTime) 🚀</h2>
-  <br>
-  <img src="https://github-readme-stats.vercel.app/api/wakatime?username=madukamalruk&theme=synthwave&hide_border=true&bg_color=0D1117" alt="WakaTime status" />
 </div>
 
 <br/>
@@ -125,11 +102,11 @@
 <br/><br/>
 <hr/>
 
-<!-- Developer Joke & Quote -->
+<!-- Developer Joke -->
 <h2 align="center">😂 For Fun 😂</h2>
+<br>
 <div align="center">
-  <img src="https://readme-jokes.vercel.app/api?theme=synthwave&hideBorder=true" width="48%" />
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=synthwave" width="48%" />
+  <img src="https://readme-jokes.vercel.app/api?theme=synthwave&hideBorder=true" width="60%" />
 </div>
 
 <br/><br/>
@@ -156,10 +133,3 @@ public:
     }
 };
 ```
-
-<br/>
-
-<!-- Terminal Console Animation at the very bottom -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kyeotic/kyeotic/master/terminal.gif" alt="animated terminal console" width="600" style="border-radius: 10px;"/>
-</p>
