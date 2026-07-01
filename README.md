@@ -31,7 +31,7 @@ I turn engineering insights into scalable architectures, embedded systems, and r
 - 🔭 **Current Focus:** Micromouse Project (Team MazeRiders) & MazeMaster 2026.
 - ⚙️ **Interests:** Robotics, Embedded Systems, PCB Design, and Software Architecture.
 - 🏆 **Community:** Active member of the Electrical Engineering Society (EESoc).
-- 🌐 **Portfolio:** [portfolio-virid-eight-31.vercel.app](https://portfolio-virid-eight-31.vercel.app/)
+- 🌐 **Portfolio:** [www.madukamalruk.com.lk](https://www.madukamalruk.com.lk/)
 - 📫 **Contact:** madukageeganage@gmail.com
 
 <br/>
