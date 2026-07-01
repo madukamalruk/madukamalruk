@@ -4,10 +4,9 @@
 </div>
 
 <!-- Running Pet Animation -->
-<marquee scrollamount="8" behavior="scroll" direction="left" width="100%">
-  <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Cat.png" alt="Cat" width="50" height="50" />
-  <img src="https://media.giphy.com/media/hSj1sT5mKzBfX39J5C/giphy.gif" alt="running" width="50" style="margin-left: -15px;" />
-</marquee>
+<div align="center">
+  <img src="animated-cat.svg" width="100%" />
+</div>
 
 <div align="center">
   <!-- Gradient Wavy Header -->
