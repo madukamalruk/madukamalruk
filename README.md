@@ -12,6 +12,15 @@
 
 <br/>
 
+<!-- GitHub Trophies (Shows dynamically based on your GitHub activity) -->
+<div align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=madukamalruk&theme=radical&no-frame=true&no-bg=true&margin-w=15" />
+  </a>
+</div>
+
+<br/>
+
 <div align="center">
 
  👨🏼‍🎓 Studying **BSc (Hons) in Electrical Engineering at University of Moratuwa**
@@ -63,7 +72,6 @@
 <div align="center">
   <h2>🐍 My Contributions 🐍</h2>
   <br>
-  <!-- NOTE: You must set up the GitHub Action for Platane/snk for this image to render properly! -->
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake-dark.svg">
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
@@ -76,12 +84,29 @@
 
 <h2 align="center">⚡ GitHub Stats ⚡</h2>
 <br>
+
+<!-- Activity Graph -->
 <div align="center">
-  <!-- Streak Stats with Synthwave Dark Theme -->
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=madukamalruk&theme=synthwave&hide_border=true&bg_color=0D1117" width="100%" />
+</div>
+<br>
+
+<div align="center">
+  <!-- Streak Stats -->
   <img width="48%" src="https://streak-stats.demolab.com?user=madukamalruk&theme=synthwave&hide_border=true&background=0D1117" alt="streak stats"/>
   
   <!-- Top Languages Stats -->
   <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=madukamalruk&layout=compact&theme=synthwave&hide_border=true&bg_color=0D1117&size_weight=0.5&count_weight=0.5" alt="top langs" />
+</div>
+
+<br/><br/>
+<hr/>
+
+<!-- Developer Joke & Quote -->
+<h2 align="center">😂 For Fun 😂</h2>
+<div align="center">
+  <img src="https://readme-jokes.vercel.app/api?theme=synthwave&hideBorder=true" width="48%" />
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=synthwave" width="48%" />
 </div>
 
 <br/><br/>
