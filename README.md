@@ -36,10 +36,96 @@
 
 <br>
 
----
+<!-- GitHub Trophies (From earlier) -->
+<div align="center">
+  <a href="https://github.com/ryo-ma/github-profile-trophy">
+    <img src="https://github-profile-trophy.vercel.app/?username=madukamalruk&theme=radical&no-frame=true&no-bg=true&margin-w=15" />
+  </a>
+</div>
 
-<!-- KillaNova Style C++ Block -->
-### `maduka@dev-board:~$` whoami
+<br>
+
+<!-- Emoji Bio (Sanjula Style / Before KillaNova) -->
+<div align="center">
+ 👨🏼‍🎓 Studying **BSc (Hons) in Electrical Engineering at University of Moratuwa**
+ 
+ 🐭 I’m currently working on **Micromouse (Team MazeRiders) & MazeMaster 2026**
+ 
+ 🌱 I’m currently learning **Advanced Control Systems & ROS**
+
+ 💬 Ask me about **C/C++, Python, Arduino, PCB Design... or anything [here](https://github.com/madukamalruk)**
+
+ ⚡ Fun fact **The word "robot" comes from the Czech word "robota", which translates to "forced labor".**
+</div>
+
+<br>
+
+<!-- Insights from KillaNova -->
+<div align="center">
+<!--START_SECTION:coding-->
+⏳ **Constant Evolution:** Writing code to bridge the gap between hardware constraints and software efficiency.
+<!--END_SECTION:coding-->
+
+<!--START_SECTION:tip-->
+💡 **Tip of the day** — Hardware debugging is 90% double-checking your ground connections.
+<!--END_SECTION:tip-->
+</div>
+
+<hr/>
+
+<h2 align="center">⚒️ Languages, Frameworks & Tools ⚒️</h2>
+<br/>
+<div align="center">
+    <!-- Skill Icons -->
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=cpp,c,python,arduino,raspberrypi,matlab,linux,git,github,vscode,figma&theme=dark" />
+    </a>
+    <br><br>
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,mysql,docker,idea&theme=dark" />
+    </a>
+</div>
+
+<br/>
+<hr/>
+
+<!-- Contribution Snake -->
+<div align="center">
+  <h2>🐍 My Contributions 🐍</h2>
+  <br>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
+  </picture>
+  <br/><br/>
+</div>
+
+<hr/>
+
+<h2 align="center">⚡ GitHub Stats ⚡</h2>
+<br>
+
+<!-- Activity Graph -->
+<div align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=madukamalruk&theme=synthwave&hide_border=true&bg_color=0D1117" width="100%" />
+</div>
+<br>
+
+<div align="center">
+  <!-- Streak Stats -->
+  <img width="48%" src="https://streak-stats.demolab.com?user=madukamalruk&theme=synthwave&hide_border=true&background=0D1117" alt="streak stats"/>
+  
+  <!-- Top Languages Stats -->
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=madukamalruk&layout=compact&theme=synthwave&hide_border=true&bg_color=0D1117&size_weight=0.5&count_weight=0.5" alt="top langs" />
+</div>
+
+<br/><br/>
+<hr/>
+
+<!-- Console Block at the bottom -->
+<h2 align="center">💻 Console 💻</h2>
+<br>
 
 ```cpp
 class Maduka : public Engineer {
@@ -58,84 +144,3 @@ public:
     }
 };
 ```
-
-> Started with simple curiosity about how things work. Now I merge mechanical design with intelligent control systems, building real-world security IoT devices and PID-based maze-solving robots.
-
----
-
-<!-- KillaNova Style Terminal output -->
-### `maduka@dev-board:~$` rosnode info /core_brain
-
-> **● /core_brain** — continuous learning node &nbsp;`active (running)`
-> Processing sensor data and algorithm optimization. Currently preparing autonomous maze-solving logic for MazeMaster 2026.
-
-<!--START_SECTION:coding-->
-⏳ **Constant Evolution:** Writing code to bridge the gap between hardware constraints and software efficiency.
-<!--END_SECTION:coding-->
-
-<!--START_SECTION:tip-->
-💡 **Tip of the day** — Hardware debugging is 90% double-checking your ground connections.
-<!--END_SECTION:tip-->
-
----
-
-<!-- Sanjula Style Emoji Bio -->
-<div align="center">
- 👨🏼‍🎓 Studying **BSc (Hons) in Electrical Engineering at University of Moratuwa**
- 
- 🐭 I’m currently working on **Micromouse (Team MazeRiders) & MazeMaster 2026**
- 
- 🌱 I’m currently learning **Advanced Control Systems & ROS**
-
- 💬 Ask me about **C/C++, Python, Arduino, PCB Design... or anything [here](https://github.com/madukamalruk)**
-
- ⚡ Fun fact **The word "robot" comes from the Czech word "robota", which translates to "forced labor" and was first used in a 1920 play!**
-</div>
- 
----
-
-<!-- Sanjula Style Stack Grid -->
-### `maduka@dev-board:~$` cat stack.txt
-
-<div align="center">
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=cpp,c,python,arduino,raspberrypi,matlab,linux,git,github,vscode,figma&theme=dark" />
-    </a>
-    <br><br>
-    <a href="https://skillicons.dev">
-      <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,mysql,docker,idea&theme=dark" />
-    </a>
-</div>
-
-<br/>
-<hr/>
-
-<!-- Sanjula Style Snake -->
-<div align="center">
-  <h2>🐍 My Contributions 🐍</h2>
-  <br>
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
-  </picture>
-  <br/><br/>
-</div>
-
-<hr/>
-
-<!-- Sanjula Style Stats -->
-<h2 align="center">⚡ GitHub Stats ⚡</h2>
-<br>
-<div align="center">
-  <img width="48%" src="https://streak-stats.demolab.com?user=madukamalruk&theme=synthwave&hide_border=true&background=0D1117" alt="streak stats"/>
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=madukamalruk&layout=compact&theme=synthwave&hide_border=true&bg_color=0D1117&size_weight=0.5&count_weight=0.5" alt="top langs" />
-</div>
-
-<br/><br/>
-<hr/>
-
-<!-- User Requested Console Footer -->
-<p align="center">
-  <img src="https://raw.githubusercontent.com/kyeotic/kyeotic/master/terminal.gif" alt="animated terminal console" width="600" style="border-radius: 10px;"/>
-</p>
