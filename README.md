@@ -117,26 +117,9 @@ I turn engineering insights into scalable architectures, embedded systems, and r
 <hr/>
 
 <!-- Console Block at the bottom -->
-<h2 align="center">💻 Console 💻</h2>
-<br>
-
-```cpp
-class Maduka : public Engineer {
-private:
-    std::string handle   = "madukamalruk";
-    std::string role     = "Electrical Engineering Undergrad @ UoM";
-    std::string based_in = "Sri Lanka 🇱🇰";
-
-public:
-    std::vector<std::string> daily_driver() {
-        return {"C/C++", "Python", "Arduino", "MATLAB"};
-    }
-    
-    std::vector<std::string> leveling_up() {
-        return {"ROS", "Advanced Control Systems", "PCB Design"};
-    }
-};
-```
+<div align="center">
+  <img src="animated-console.svg" width="100%" />
+</div>
 
 <br>
 
