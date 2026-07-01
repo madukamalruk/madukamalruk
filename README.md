@@ -11,7 +11,7 @@
 
 <div align="center">
   <!-- Gradient Wavy Header -->
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,15&height=210&section=header&text=Maduka%20Malruk&fontSize=70&fontColor=fff&animation=twinkling&fontAlignY=32&desc=robotics%20%C2%B7%20embedded%20systems%20%C2%B7%20IoT&descAlignY=54&descSize=18" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=00e5ff&height=210&section=header&text=Maduka%20Malruk&fontSize=70&fontColor=fff&animation=twinkling&fontAlignY=32&desc=robotics%20%C2%B7%20embedded%20systems%20%C2%B7%20IoT&descAlignY=54&descSize=18" width="100%"/>
 </div>
 
 <br>
@@ -142,4 +142,4 @@ public:
 <br>
 
 <!-- Footer Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=1,11,15&height=100&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=00e5ff&height=100&section=footer" width="100%"/>
