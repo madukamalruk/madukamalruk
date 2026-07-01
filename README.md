@@ -1,56 +1,93 @@
-<!-- Animated Neon Header -->
-<div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=00e5ff&height=220&section=header&text=Maduka%20Malruk&fontSize=70&fontAlignY=35&animation=twinkling&fontColor=ffffff&desc=Electrical%20Engineer%20%26%20Robotics%20Enthusiast&descAlignY=55&descAlign=62"/>
+<!-- Visitor Badge -->
+<img align="right" src="https://visitor-badge.laobi.icu/badge?page_id=madukamalruk.madukamalruk&left_color=0D1117&right_color=00e5ff&left_text=Visitors" />
 
-  <!-- Animated Typing Text matching your portfolio's cyan accent -->
-  <a href="https://git.io/typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=20&pause=1000&color=00E5FF&center=true&vCenter=true&width=435&lines=Electrical+Engineering+Undergrad;Embedded+Systems+Developer;Robotics+%26+Control;PCB+Design+%26+IoT" alt="Typing SVG" />
-  </a>
-</div>
+<br/>
 
----
+<!-- Animated Typing Header -->
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Space+Grotesk&weight=600&size=35&center=true&vCenter=true&width=600&height=70&duration=4000&color=00E5FF&lines=Welcome+Aboard!+👋;+I'm+Maduka+Malruk!;+Electrical+Engineer+⚡;+Robotics+Enthusiast+🤖" />
+</h1>
 
-### ⚡ About Me
-
-I turn engineering insights into scalable architectures, embedded systems, and robust robotics solutions. Currently pursuing my BSc (Hons) in Electrical Engineering at the **University of Moratuwa**.
-
-- 🔭 **Current Focus:** Micromouse Project (Team MazeRiders) & MazeMaster 2026.
-- ⚙️ **Interests:** Robotics, Embedded Systems, PCB Design, and Software Architecture.
-- 🏆 **Community:** Active member of the Electrical Engineering Society (EESoc).
-- 🌐 **Portfolio:** [portfolio-virid-eight-31.vercel.app](https://portfolio-virid-eight-31.vercel.app/)
-- 📫 **Contact:** madukageeganage@gmail.com
-
----
-
-### 🛠️ Core Technologies & Tools
-
-<p align="center">
-  <img src="https://img.shields.io/badge/C%2FC%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="C/C++" />
-  <img src="https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
-  <img src="https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white" alt="Arduino" />
-  <img src="https://img.shields.io/badge/Raspberry%20Pi-A22846?style=for-the-badge&logo=Raspberry%20Pi&logoColor=white" alt="Raspberry Pi" />
-  <img src="https://img.shields.io/badge/SolidWorks-E32227?style=for-the-badge&logo=solidworks&logoColor=white" alt="SolidWorks" />
-  <img src="https://img.shields.io/badge/MATLAB-e07519?style=for-the-badge&logo=mathworks&logoColor=white" alt="MATLAB" />
-  <img src="https://img.shields.io/badge/Revit-0696D7?style=for-the-badge&logo=autodesk&logoColor=white" alt="Revit" />
-</p>
-
----
-
-### 📊 GitHub Stats
-
-<div align="center">
-  <!-- GitHub stats cards using a dark synthwave theme to match your site -->
-  <img src="https://github-readme-stats.vercel.app/api?username=madukamalruk&show_icons=true&theme=synthwave&hide_border=true&bg_color=0D1117" width="48%" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=madukamalruk&layout=compact&theme=synthwave&hide_border=true&bg_color=0D1117" width="48%" />
-</div>
+<h3 align="center">Engineering the future with scalable architectures and embedded systems 🇱🇰</h3>
 
 <br/>
 
 <div align="center">
-  <a href="https://www.linkedin.com/in/maduka-malruk">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+
+ 👨🏼‍🎓 Studying **BSc (Hons) in Electrical Engineering at University of Moratuwa**
+ 
+ 🐭 I’m currently working on **Micromouse (Team MazeRiders) & MazeMaster 2026**
+ 
+ 🌱 I’m currently learning **Advanced Control Systems & ROS**
+
+ 💬 Ask me about **C/C++, Python, Arduino, PCB Design... or anything [here](https://github.com/madukamalruk)**
+
+ ⚡ Fun fact **The word "robot" comes from the Czech word "robota", which translates to "forced labor" and was first used in a 1920 play!**
+
+</div>
+ 
+<br/>
+
+<!-- Contact Badges -->
+<div align="center"> 
+  <a href="mailto:madukageeganage@gmail.com">
+    <img src="https://img.shields.io/badge/Gmail-333333?style=for-the-badge&logo=gmail&logoColor=red" />
   </a>
-  <a href="https://portfolio-virid-eight-31.vercel.app/">
-    <img src="https://img.shields.io/badge/Portfolio-00E5FF?style=for-the-badge&logo=vercel&logoColor=black" alt="Portfolio" />
+  <a href="https://www.linkedin.com/in/maduka-malruk/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+  </a>
+  <a href="https://portfolio-virid-eight-31.vercel.app/" target="_blank">
+     <img src="https://img.shields.io/badge/Portfolio-00E5FF?style=for-the-badge&logo=vercel&logoColor=black" /> 
   </a>
 </div>
+
+<hr/>
+ 
+<h2 align="center">⚒️ Languages, Frameworks & Tools ⚒️</h2>
+<br/>
+<div align="center">
+    <!-- Skill Icons (Beautiful rounded icons) -->
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=cpp,c,python,arduino,raspberrypi,matlab,linux,git,github,vscode,figma&theme=dark" />
+    </a>
+    <br><br>
+    <a href="https://skillicons.dev">
+      <img src="https://skillicons.dev/icons?i=html,css,js,react,nodejs,mysql,docker,idea&theme=dark" />
+    </a>
+</div>
+
+<br/>
+<hr/>
+
+<!-- Contribution Snake -->
+<div align="center">
+  <h2>🐍 My Contributions 🐍</h2>
+  <br>
+  <!-- NOTE: You must set up the GitHub Action for Platane/snk for this image to render properly! -->
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
+  </picture>
+  <br/><br/>
+</div>
+
+<hr/>
+
+<h2 align="center">⚡ GitHub Stats ⚡</h2>
+<br>
+<div align="center">
+  <!-- Streak Stats with Synthwave Dark Theme -->
+  <img width="48%" src="https://streak-stats.demolab.com?user=madukamalruk&theme=synthwave&hide_border=true&background=0D1117" alt="streak stats"/>
+  
+  <!-- Top Languages Stats -->
+  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=madukamalruk&layout=compact&theme=synthwave&hide_border=true&bg_color=0D1117&size_weight=0.5&count_weight=0.5" alt="top langs" />
+</div>
+
+<br/><br/>
+<hr/>
+
+<!-- Cool animated GIF at the bottom -->
+<p align="center">
+  <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" alt="robot waving" width="200" />
+</p>
