@@ -1,0 +1,53 @@
+name: Profile cards
+
+# Rebuilds the live images used in README.md and force-pushes them to the
+# `output` branch:
+#   - stats + language cards and project cards (scripts/telemetry.py)
+#   - contribution snake
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # every 3 hours
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-cards
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Stats, language and project cards
+        env:
+          # Optional: add a classic PAT (scopes: repo, read:user) as METRICS_TOKEN
+          # so private repositories count towards the language card.
+          GH_TOKEN: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: python3 scripts/telemetry.py --out dist
+
+      - name: Contribution snake
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+
+      - name: Publish to output branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          jekyll: false
+          commit_message: "chore: refresh profile cards"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
