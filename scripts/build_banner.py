@@ -19,25 +19,26 @@ ASSETS = ROOT / "assets"
 
 MONO = "'JetBrains Mono','SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace"
 
-# palette -------------------------------------------------------------------
-INK = "#060b16"
-WALL = "#0b1426"
-WALL_2 = "#0e1a31"
-GRID = "#13223f"
-LINE = "#1f3358"
-CYAN = "#3ee8ff"
-CYAN_DIM = "#0f3a4a"
-AMBER = "#ffb52e"
-AMBER_DIM = "#3d2a0c"
-RED = "#ff4d5e"
-GREEN = "#3dff8b"
-WOOD = "#6b4428"
-WOOD_HI = "#8a5a35"
-WOOD_LO = "#4a2e1b"
-STEEL = "#2a3550"
-STEEL_HI = "#3c4a6b"
-TEXT_DIM = "#5f7aa8"
-
+# palette (matches madukamalruk.com.lk: obsidian, electric cyan, copper/gold) --
+INK = "#06070A"
+WALL = "#0A0D14"
+WALL_2 = "#0D111A"
+GRID = "#10151E"
+LINE = "#1C2330"
+CYAN = "#00E5FF"
+CYAN_DIM = "#06363F"
+AMBER = "#E0A84A"
+AMBER_DIM = "#2E2310"
+GOLD = "#C9A227"
+COPPER = "#B87333"
+RED = "#E5484D"
+GREEN = "#3DD68C"
+WOOD = "#10141B"      # bench front
+WOOD_HI = "#1A2029"   # bench top / shelves
+WOOD_LO = "#0B0E13"
+STEEL = "#181E28"
+STEEL_HI = "#2A3240"
+TEXT_DIM = "#5A6E85"
 
 def r(x, y, w, h, fill, extra=""):
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{fill}" {extra}/>'
@@ -80,7 +81,7 @@ def led_sign(text: str, x0: int, y0: int, pitch: int = 8) -> str:
                         f'style="animation-delay:{delay:.2f}s"/>'
                     )
                 else:
-                    out.append(f'<circle cx="{cx}" cy="{cy}" r="2.4" fill="#122038"/>')
+                    out.append(f'<circle cx="{cx}" cy="{cy}" r="2.4" fill="#11161F"/>')
             col += 1
     return "\n".join(out)
 
@@ -116,59 +117,50 @@ def hero() -> str:
     p: list[str] = []
     add = p.append
 
+    # one shared rhythm: every loop is a multiple of 1.2 s, nothing strobes
     style = f"""
     <style>
       text {{ font-family: {MONO}; }}
-      .ledc {{ fill:{CYAN}; filter:url(#glowC); animation: shimmer 2.6s ease-in-out infinite; }}
-      .leda {{ fill:{AMBER}; filter:url(#glowA); animation: shimmer 2.6s ease-in-out infinite; }}
-      @keyframes shimmer {{ 0%,100% {{opacity:.72}} 50% {{opacity:1}} }}
-      .sign {{ animation: flicker 9s linear infinite; }}
-      @keyframes flicker {{ 0%,61%,63%,65%,100% {{opacity:1}} 62%,64% {{opacity:.35}} }}
-      .blink {{ animation: blink 1.2s steps(1) infinite; }}
-      .blink-slow {{ animation: blink 2.4s steps(1) infinite; }}
-      .blink-fast {{ animation: blink .5s steps(1) infinite; }}
-      @keyframes blink {{ 0% {{opacity:1}} 50% {{opacity:.12}} }}
-      .chase {{ animation: chase 1.6s steps(1) infinite; opacity:.15; }}
-      @keyframes chase {{ 0%,24% {{opacity:1}} 25%,100% {{opacity:.15}} }}
-      .twinkle {{ animation: twinkle 3s ease-in-out infinite; }}
-      @keyframes twinkle {{ 0%,100% {{opacity:.25}} 50% {{opacity:1}} }}
-      .arc {{ opacity:0; animation: arc 1.9s steps(1) infinite; }}
-      @keyframes arc {{ 0% {{opacity:1}} 6% {{opacity:0}} 100% {{opacity:0}} }}
-      .scope {{ animation: scroll 1.4s linear infinite; }}
-      .scope2 {{ animation: scroll2 2.8s linear infinite; }}
+      .ledc {{ fill:{CYAN}; filter:url(#glowC); animation: shimmer 4.8s ease-in-out infinite; }}
+      .leda {{ fill:{AMBER}; filter:url(#glowA); animation: shimmer 4.8s ease-in-out infinite; }}
+      @keyframes shimmer {{ 0%,100% {{opacity:.86}} 50% {{opacity:1}} }}
+      .blink {{ animation: pulse 2.4s ease-in-out infinite; }}
+      .blink-slow {{ animation: pulse 4.8s ease-in-out infinite; }}
+      .blink-fast {{ animation: pulse 1.2s ease-in-out infinite; }}
+      @keyframes pulse {{ 0%,100% {{opacity:1}} 50% {{opacity:.45}} }}
+      .chase {{ opacity:.3; animation: chase 4.8s ease-in-out infinite; }}
+      @keyframes chase {{ 0%,30% {{opacity:.9}} 45%,100% {{opacity:.3}} }}
+      .twinkle {{ animation: twinkle 4.8s ease-in-out infinite; }}
+      @keyframes twinkle {{ 0%,100% {{opacity:.3}} 50% {{opacity:.85}} }}
+      .arc {{ opacity:0; animation: arc 4.8s ease-out infinite; }}
+      @keyframes arc {{ 0% {{opacity:.4}} 4% {{opacity:0}} 100% {{opacity:0}} }}
+      .scope {{ animation: scroll 2.4s linear infinite; }}
+      .scope2 {{ animation: scroll2 4.8s linear infinite; }}
       @keyframes scroll {{ from {{transform:translateX(0)}} to {{transform:translateX(-40px)}} }}
       @keyframes scroll2 {{ from {{transform:translateX(0)}} to {{transform:translateX(-48px)}} }}
-      .rd {{ opacity:0; animation: reading 12s steps(1) infinite; }}
+      .rd {{ opacity:0; animation: reading 14.4s steps(1) infinite; }}
       @keyframes reading {{ 0%,24.9% {{opacity:1}} 25%,100% {{opacity:0}} }}
-      .pulse {{ stroke-dasharray: 10 150; animation: flow 2.2s linear infinite; }}
-      .pulse.b {{ animation-duration: 3.1s; }}
-      .pulse.c {{ animation-duration: 2.6s; animation-delay:-1s; }}
+      .pulse {{ stroke-dasharray: 10 150; animation: flow 4.8s linear infinite; }}
+      .pulse.b {{ animation-delay: -1.6s; }}
+      .pulse.c {{ animation-delay: -3.2s; }}
       @keyframes flow {{ from {{stroke-dashoffset:160}} to {{stroke-dashoffset:0}} }}
-      .smoke {{ animation: smoke 3.2s ease-out infinite; }}
-      @keyframes smoke {{ 0% {{transform:translate(0,0); opacity:0}} 15% {{opacity:.55}}
+      .smoke {{ animation: smoke 4.8s ease-out infinite; }}
+      @keyframes smoke {{ 0% {{transform:translate(0,0); opacity:0}} 15% {{opacity:.35}}
                           100% {{transform:translate(6px,-46px); opacity:0}} }}
-      .key {{ opacity:.25; animation: key 1.1s steps(1) infinite; }}
-      @keyframes key {{ 0%,12% {{opacity:1}} 13%,100% {{opacity:.25}} }}
-      .hand {{ animation: type .32s steps(2) infinite; }}
-      @keyframes type {{ 0% {{transform:translateY(0)}} 100% {{transform:translateY(-2px)}} }}
-      .bolt {{ animation: boltflash 3.4s steps(1) infinite; }}
-      @keyframes boltflash {{ 0%,88% {{fill:#1a1a1a}} 89%,91%,94% {{fill:{AMBER}}} 90%,92%,95%,100% {{fill:#1a1a1a}} }}
-      .cone {{ animation: lamp 6s ease-in-out infinite; }}
-      @keyframes lamp {{ 0%,100% {{opacity:.16}} 50% {{opacity:.22}} }}
-      .ticker {{ animation: ticker 38s linear infinite; }}
+      .cone {{ animation: lamp 9.6s ease-in-out infinite; }}
+      @keyframes lamp {{ 0%,100% {{opacity:.1}} 50% {{opacity:.14}} }}
+      .ticker {{ animation: ticker 48s linear infinite; }}
       @keyframes ticker {{ from {{transform:translateX(0)}} to {{transform:translateX(-1240px)}} }}
-      .cursor {{ animation: blink 1s steps(1) infinite; }}
-      .breathe {{ animation: breathe 4.5s ease-in-out infinite; }}
-      @keyframes breathe {{ 50% {{ transform: translateY(-1.5px) }} }}
+      .cursor {{ animation: pulse 2.4s steps(1) infinite; }}
     </style>"""
 
     defs = f"""
     <defs>
       <filter id="glowC" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        <feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
       </filter>
       <filter id="glowA" x="-50%" y="-50%" width="200%" height="200%">
-        <feGaussianBlur stdDeviation="2.2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        <feGaussianBlur stdDeviation="1.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
       </filter>
       <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4"/></filter>
       <pattern id="bp" width="24" height="24" patternUnits="userSpaceOnUse">
@@ -178,13 +170,13 @@ def hero() -> str:
         <rect x="2" y="2" width="2" height="2" fill="#a9a493"/>
       </pattern>
       <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#050a18"/><stop offset="1" stop-color="#132a52"/>
+        <stop offset="0" stop-color="#04060B"/><stop offset="1" stop-color="#0E1828"/>
       </linearGradient>
       <linearGradient id="coneG" x1="0" y1="0" x2="0" y2="1">
         <stop offset="0" stop-color="{AMBER}" stop-opacity="1"/><stop offset="1" stop-color="{AMBER}" stop-opacity="0"/>
       </linearGradient>
       <linearGradient id="screenG" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0" stop-color="#0a1a1f"/><stop offset="1" stop-color="#06120f"/>
+        <stop offset="0" stop-color="#08140F"/><stop offset="1" stop-color="#050C09"/>
       </linearGradient>
       <clipPath id="scopeClip"><rect x="44" y="286" width="118" height="72"/></clipPath>
       <clipPath id="tickerClip"><rect x="0" y="472" width="{W}" height="28"/></clipPath>
@@ -195,7 +187,7 @@ def hero() -> str:
         f'role="img" aria-labelledby="t d">')
     add('<title id="t">MADUKZ SPACE</title>')
     add('<desc id="d">Animated pixel-style electronics lab: LED sign, oscilloscope, multimeter, '
-        'breadboard, PCB layout on a monitor, Tesla coil, robot arm, soldering station and a micromouse.</desc>')
+        'breadboard, PCB layout on a monitor, Tesla coil, robot arm, soldering station and a micromouse on the bench.</desc>')
     add(style)
     add(defs)
     add('<g clip-path="url(#frame)" shape-rendering="crispEdges">')
@@ -210,32 +202,16 @@ def hero() -> str:
         add(r(x, 14, 4, 6, STEEL))
 
     # LED sign ----------------------------------------------------------------
-    add('<g class="sign">')
-    add(r(36, 28, 600, 92, "#050913", f'stroke="{LINE}" stroke-width="2" rx="6"'))
+    add('<g>')
+    add(r(36, 28, 600, 92, INK, f'stroke="{LINE}" stroke-width="2" rx="6"'))
     for sx, sy in [(44, 36), (620, 36), (44, 104), (620, 104)]:
         add(f'<circle cx="{sx + 4}" cy="{sy + 4}" r="3" fill="{STEEL_HI}"/>')
     add(led_sign("MADUKZ SPACE", 54, 50))
     add("</g>")
     # sign power cable
-    add(f'<path d="M636 74 C670 74 668 140 700 150" fill="none" stroke="#111b2e" stroke-width="4"/>')
+    add(f'<path d="M636 74 C670 74 668 140 700 150" fill="none" stroke="#0E121A" stroke-width="4"/>')
     add(f'<text x="40" y="136" font-size="13" fill="{TEXT_DIM}" letter-spacing="2">'
         f'ELECTRICAL ENGINEERING · ROBOTICS · EMBEDDED SYSTEMS</text>')
-
-    # wall clock -----------------------------------------------------------------
-    add(f'<circle cx="716" cy="74" r="30" fill="#0a1222" stroke="{STEEL_HI}" stroke-width="4"/>')
-    for k in range(12):
-        a = k * math.pi / 6
-        add(f'<rect x="{716 + 22 * math.sin(a) - 1.5:.1f}" y="{74 - 22 * math.cos(a) - 1.5:.1f}" '
-            f'width="3" height="3" fill="{TEXT_DIM}"/>')
-    add(f'<line x1="716" y1="74" x2="716" y2="58" stroke="{CYAN}" stroke-width="3">'
-        f'<animateTransform attributeName="transform" type="rotate" from="0 716 74" to="360 716 74" dur="60s" repeatCount="indefinite"/></line>')
-    add(f'<line x1="716" y1="74" x2="728" y2="74" stroke="#cfd8e8" stroke-width="3">'
-        f'<animateTransform attributeName="transform" type="rotate" from="0 716 74" to="360 716 74" dur="720s" repeatCount="indefinite"/></line>')
-    add(r(714, 72, 4, 4, AMBER))
-
-    # high-voltage warning plate ---------------------------------------------------
-    add(f'<path d="M800 50 L832 106 L768 106 Z" fill="{AMBER}" stroke="#1a1a1a" stroke-width="3"/>')
-    add('<path class="bolt" d="M804 64 L790 88 L800 88 L794 102 L812 80 L802 80 L808 64 Z" fill="#1a1a1a"/>')
 
     # window with night sky ----------------------------------------------------------
     add(r(904, 26, 264, 168, STEEL, 'rx="4"'))
@@ -246,13 +222,10 @@ def hero() -> str:
         add(f'<rect class="twinkle" x="{sx}" y="{sy}" width="3" height="3" fill="#dbe8ff" '
             f'style="animation-delay:{-i * 0.37:.2f}s"/>')
     add('<circle cx="1112" cy="70" r="18" fill="#f1e6c6"/><circle cx="1104" cy="64" r="18" fill="#0b1934"/>')
-    # satellite drifting across
-    add(f'<g><rect x="0" y="0" width="6" height="3" fill="#cfe3ff"/><rect class="blink-fast" x="2" y="-2" width="2" height="2" fill="{RED}"/>'
-        f'<animateMotion path="M904 120 L1168 84" dur="16s" repeatCount="indefinite"/></g>')
     # far skyline
     for bx, bw, bh in [(912, 26, 26), (940, 18, 40), (960, 30, 22), (992, 22, 46), (1016, 34, 30),
                        (1052, 20, 52), (1074, 28, 24), (1104, 22, 38), (1128, 32, 28)]:
-        add(r(bx, 186 - bh, bw, bh, "#0a1328"))
+        add(r(bx, 186 - bh, bw, bh, "#080C14"))
         if bh > 30:
             add(f'<rect class="blink-slow" x="{bx + bw // 2 - 1}" y="{186 - bh - 3}" width="3" height="3" fill="{RED}"/>')
     add(r(1032, 34, 8, 152, STEEL))
@@ -282,7 +255,7 @@ def hero() -> str:
         "M90 162 L104 160 L102 166 L118 164",
     ]
     for i, d in enumerate(arcs):
-        add(f'<path class="arc" d="{d}" fill="none" stroke="#c9b6ff" stroke-width="2" '
+        add(f'<path class="arc" d="{d}" fill="none" stroke="#9BE9FF" stroke-width="2" '
             f'filter="url(#glowC)" style="animation-delay:{-i * 0.38:.2f}s"/>')
 
     # capacitors
@@ -340,7 +313,7 @@ def hero() -> str:
     add(r(mx + 44, my + 5, 84, 4, "#3a4a6e"))
     # board outline
     bx, by = mx + 16, my + 24
-    add(r(bx, by, 170, 124, "#0b2a22", 'stroke="#d9c64a" stroke-width="1.5"'))
+    add(r(bx, by, 170, 124, "#0b2a22", 'stroke="#C9A227" stroke-width="1.5"'))
     # copper traces (static)
     traces = [
         f"M{bx + 20} {by + 20} H{bx + 70} V{by + 50} H{bx + 120}",
@@ -350,7 +323,7 @@ def hero() -> str:
         f"M{bx + 140} {by + 104} H{bx + 156} V{by + 30}",
     ]
     for i, d in enumerate(traces):
-        col = "#c8483f" if i % 2 == 0 else "#3f6fd1"
+        col = COPPER if i % 2 == 0 else "#2F6FB0"
         add(f'<path d="{d}" fill="none" stroke="{col}" stroke-width="3"/>')
     for i, d in enumerate(traces):
         cls = ["", " b", " c", " b", ""][i]
@@ -359,15 +332,15 @@ def hero() -> str:
     # MCU + pads
     add(r(bx + 64, by + 56, 40, 30, "#1a1a1a", 'stroke="#888" stroke-width="1"'))
     for k in range(5):
-        add(r(bx + 66 + k * 8, by + 52, 4, 4, "#d9c64a"))
-        add(r(bx + 66 + k * 8, by + 86, 4, 4, "#d9c64a"))
+        add(r(bx + 66 + k * 8, by + 52, 4, 4, "#C9A227"))
+        add(r(bx + 66 + k * 8, by + 86, 4, 4, "#C9A227"))
     for (vx, vy) in [(20, 20), (20, 40), (150, 20), (30, 104), (140, 104), (120, 50), (100, 80)]:
-        add(f'<circle cx="{bx + vx}" cy="{by + vy}" r="3.5" fill="#d9c64a"/>'
+        add(f'<circle cx="{bx + vx}" cy="{by + vy}" r="3.5" fill="#C9A227"/>'
             f'<circle cx="{bx + vx}" cy="{by + vy}" r="1.4" fill="#06101e"/>')
     # side panel (layers)
     lx = mx + 196
-    for i, (name, col) in enumerate([("F.Cu", "#c8483f"), ("B.Cu", "#3f6fd1"), ("F.Silk", "#d9c64a"),
-                                     ("Edge", "#d9c64a"), ("F.Mask", "#9a4fd6")]):
+    for i, (name, col) in enumerate([("F.Cu", COPPER), ("B.Cu", "#2F6FB0"), ("F.Silk", "#C9A227"),
+                                     ("Edge", "#C9A227"), ("F.Mask", "#9a4fd6")]):
         add(r(lx, by + 4 + i * 16, 8, 8, col))
         add(r(lx + 12, by + 7 + i * 16, 24, 3, "#3a4a6e"))
     add(r(mx + 8, my + mh - 11, 70, 4, GREEN, 'opacity=".6"'))
@@ -399,29 +372,22 @@ def hero() -> str:
     add(r(1006, 242, 24, 10, "#4a3a20"))
     add('<rect class="twinkle" x="1010" y="216" width="3" height="3" fill="#fff"/>')
     # books
-    for i, (lbl, col, h) in enumerate([("PID", "#c8483f", 44), ("DSP", "#3f6fd1", 40), ("EMAG", "#1f8a6a", 46),
-                                        ("C++", "#7a4fd6", 38), ("CTRL", "#d98a2b", 42)]):
+    for i, (lbl, col, h) in enumerate([("PID", "#2A3444", 44), ("DSP", "#22303F", 40), ("EMAG", COPPER, 46),
+                                        ("C++", "#2E3A4C", 38), ("CTRL", "#1F2A38", 42)]):
         bx3 = 1044 + i * 16
         add(r(bx3, 252 - h, 14, h, col))
         add(r(bx3, 252 - h + 4, 14, 2, "#00000055"))
         add(r(bx3 + 3, 252 - 14, 8, 3, "#f3f3f3", 'opacity=".55"'))
-    # little bot
-    add(r(1130, 222, 30, 30, "#2a3a5c", 'rx="3"'))
-    add(r(1136, 230, 6, 6, CYAN, 'class="blink-slow"'))
-    add(r(1148, 230, 6, 6, CYAN, 'class="blink-slow"'))
-    add(r(1138, 242, 14, 3, "#9aa6bd"))
-    add(r(1144, 210, 2, 12, STEEL_HI))
-    add(f'<circle class="blink" cx="1145" cy="208" r="3" fill="{RED}"/>')
-
     # desk ------------------------------------------------------------------------------------
     add(r(0, 380, W, 12, WOOD_HI))
+    add(r(0, 380, W, 1, COPPER, 'opacity=".55"'))
     add(r(0, 392, W, 48, WOOD))
     add(r(0, 392, W, 3, WOOD_LO))
     for x in range(0, W, 150):
-        add(r(x + 40, 404, 70, 2, WOOD_LO))
-    add(r(0, 440, W, 32, "#070d1a"))
+        add(r(x + 40, 404, 70, 1, LINE))
+    add(r(0, 440, W, 32, INK))
     for x in range(0, W, 48):
-        add(r(x, 440, 2, 32, "#0b1426"))
+        add(r(x, 440, 1, 32, WALL_2))
 
     # oscilloscope ---------------------------------------------------------------------------
     add(r(28, 272, 206, 108, "#1e2840", 'rx="4"'))
@@ -491,69 +457,47 @@ def hero() -> str:
         for col in range(14):
             kx = 532 + col * 11
             ky = 370 + row * 5
-            delay = -((col * 7 + row * 13) % 11) * 0.1
-            add(r(kx, ky, 9, 3, CYAN if (col + row) % 3 else "#b07cff",
-                  f'class="key" style="animation-delay:{delay:.1f}s"'))
+            add(r(kx, ky, 9, 3, CYAN, 'opacity=".35"'))
             k += 1
 
-    # engineer (seen from behind) -------------------------------------------------------------------
-    SKIN, SKIN_LO = "#c48a66", "#9e6a4c"
-    HOOD, HOOD_LO, HOOD_HI = "#1f4c6e", "#173b57", "#2a628a"
-    HAIR, HAIR_HI = "#1a120d", "#3d2a1f"
-    add('<g shape-rendering="geometricPrecision"><g class="breathe">')
-    # right arm on the mouse (behind the torso)
-    add(f'<path d="M796 334 C810 344 818 356 822 366" stroke="{HOOD_LO}" stroke-width="14" fill="none" stroke-linecap="round"/>')
-    add('<ellipse cx="830" cy="375" rx="9" ry="5" fill="#141c2f"/>')
-    add(f'<path d="M826 372 h8" stroke="{CYAN}" stroke-width="1.5" opacity=".7"/>')
-    add(f'<ellipse cx="826" cy="369" rx="7" ry="5" fill="{SKIN}"/>')
-    # torso / hoodie
-    add(f'<path d="M714 342 C716 325 732 316 748 314 H772 C788 316 804 325 806 342 L812 392 H708 Z" fill="{HOOD}"/>')
-    add(f'<path d="M788 317 C800 323 805 332 806 342 L812 392 H790 C792 360 792 336 788 317 Z" fill="{HOOD_LO}"/>')
-    add(f'<path d="M722 330 C728 322 738 318 748 316 L746 324 C737 326 729 331 724 338 Z" fill="{HOOD_HI}" opacity=".8"/>')
-    add(f'<path d="M760 334 V388" stroke="{HOOD_LO}" stroke-width="1.5"/>')
-    add(f'<path d="M732 350 C740 354 748 352 752 346 M768 346 C772 352 780 354 788 350" stroke="{HOOD_LO}" stroke-width="1.5" fill="none" opacity=".8"/>')
-    # left arm reaching for the keyboard
-    add(f'<path d="M726 334 C710 344 698 356 686 364" stroke="{HOOD}" stroke-width="15" fill="none" stroke-linecap="round"/>')
-    add(f'<path d="M724 342 C712 352 702 360 690 368" stroke="{HOOD_LO}" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>')
-    add(f'<circle cx="687" cy="365" r="7" fill="{HOOD_HI}"/>')
-    add(f'<g class="hand"><ellipse cx="676" cy="368" rx="8" ry="5" fill="{SKIN}"/>'
-        f'<path d="M670 370 h10" stroke="{SKIN_LO}" stroke-width="1"/></g>')
-    # chair back in front of the lower torso
-    add('<path d="M712 374 Q712 358 728 356 H792 Q808 358 808 374 V440 H712 Z" fill="#161d2f"/>')
-    add('<path d="M720 376 Q720 365 732 364 H788 Q800 365 800 376 V440 H720 Z" fill="#202a42"/>')
-    add(f'<path d="M726 372 V432 M794 372 V432" stroke="{CYAN}" stroke-width="2" opacity=".45"/>')
-    add('<path d="M736 380 H784" stroke="#2c3858" stroke-width="2"/>')
-    # neck + folded hood
-    add(f'<path d="M750 292 H770 V318 H750 Z" fill="{SKIN}"/>')
-    add(f'<path d="M750 292 H770 V302 H750 Z" fill="{SKIN_LO}"/>')
-    add(f'<path d="M738 316 C738 302 782 302 782 316 C782 330 738 330 738 316 Z" fill="{HOOD_HI}"/>')
-    add(f'<path d="M749 315 C749 309 771 309 771 315 C771 320 749 320 749 315 Z" fill="#163b58"/>')
-    # head (slow look left / right)
-    add('<g><animateTransform attributeName="transform" type="rotate" '
-        'values="0 760 300;-2.5 760 300;0 760 300;0 760 300;2 760 300;0 760 300" dur="9s" repeatCount="indefinite"/>')
-    add(f'<ellipse cx="760" cy="268" rx="26" ry="30" fill="{HAIR}"/>')
-    add(f'<path d="M738 284 C740 298 750 302 760 302 C770 302 780 298 782 284 Z" fill="{HAIR}"/>')
-    add(f'<path d="M744 250 L748 241 L754 247 L760 239 L766 247 L772 241 L776 250 Z" fill="{HAIR}"/>')
-    for d in ("M748 248 C744 262 744 276 748 292", "M760 242 C758 258 758 280 760 298",
-              "M772 248 C776 262 776 276 772 292", "M754 246 C752 262 752 280 754 296"):
-        add(f'<path d="{d}" stroke="{HAIR_HI}" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/>')
-    add('<path d="M742 258 C748 246 760 241 772 246" stroke="#5a3e2c" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>')
-    # headphones
-    add('<path d="M736 276 C732 232 788 232 784 276" stroke="#2c3a5a" stroke-width="7" fill="none" stroke-linecap="round"/>')
-    add('<path d="M738 272 C736 238 784 238 782 272" stroke="#4a5d86" stroke-width="1.5" fill="none" opacity=".8"/>')
-    add('<rect x="723" y="264" width="17" height="30" rx="7" fill="#141c2f" stroke="#2c3a5a" stroke-width="2"/>')
-    add('<rect x="780" y="264" width="17" height="30" rx="7" fill="#141c2f" stroke="#2c3a5a" stroke-width="2"/>')
-    add(f'<rect class="twinkle" x="726" y="270" width="3" height="18" rx="1.5" fill="{CYAN}" filter="url(#glowC)"/>')
-    add(f'<rect class="twinkle" x="791" y="270" width="3" height="18" rx="1.5" fill="{CYAN}" filter="url(#glowC)" style="animation-delay:-1.5s"/>')
+    # micromouse on the bench (centrepiece) -------------------------------------------------------
+    add('<g shape-rendering="geometricPrecision">')
+    add(f'<path d="M842 352 L900 340 L900 370 L842 362 Z" fill="{RED}" opacity=".06"/>')   # IR beam
+    add('<ellipse cx="780" cy="381" rx="70" ry="3" fill="#000" opacity=".45"/>')         # contact shadow
+    # rear motor + gearbox
+    add(f'<rect x="748" y="356" width="64" height="10" rx="5" fill="{STEEL_HI}"/>')
+    add('<rect x="752" y="358" width="56" height="2" fill="#3A4558"/>')
+    # chassis PCB with gold edge plating
+    add('<rect x="716" y="346" width="128" height="10" rx="2" fill="#0D2A20"/>')
+    add(f'<rect x="716" y="346" width="128" height="1.5" fill="{GOLD}" opacity=".8"/>')
+    for k in range(9):
+        add(f'<rect x="{724 + k * 13}" y="352" width="5" height="2" fill="{GOLD}" opacity=".7"/>')
+    # LiPo pack
+    add('<rect x="724" y="333" width="34" height="13" rx="2" fill="#2C3442"/>')
+    add('<rect x="726" y="335" width="30" height="3" fill="#3B4456"/>')
+    add(f'<path d="M758 338 C764 338 764 344 770 344" stroke="{RED}" stroke-width="1.5" fill="none"/>')
+    # MCU (QFP) + status LED
+    add('<rect x="772" y="336" width="26" height="10" rx="1" fill="#1E232D" stroke="#3A4558" stroke-width="1"/>')
+    for k in range(6):
+        add(f'<rect x="{774 + k * 4}" y="334" width="2" height="2" fill="{GOLD}"/>')
+    add(f'<circle class="blink-slow" cx="804" cy="341" r="2.2" fill="{CYAN}" filter="url(#glowC)"/>')
+    # IMU + driver
+    add('<rect x="810" y="339" width="12" height="7" rx="1" fill="#14181F"/>')
+    # front sensor mast with IR emitters
+    add('<rect x="828" y="326" width="12" height="20" rx="2" fill="#14181F"/>')
+    for k, yy in enumerate((330, 338)):
+        add(f'<circle class="blink" cx="841" cy="{yy}" r="2" fill="{RED}" opacity=".85" '
+            f'style="animation-delay:{-k * 1.2:.1f}s"/>')
+    add('<rect x="830" y="329" width="4" height="4" fill="#2A3240"/><rect x="830" y="337" width="4" height="4" fill="#2A3240"/>')
+    # wheels (slow spin)
+    for cx in (744, 816):
+        add(f'<circle cx="{cx}" cy="366" r="14" fill="#0B0D11"/>')
+        add(f'<circle cx="{cx}" cy="366" r="10" fill="#1B212B"/>')
+        add(f'<g><animateTransform attributeName="transform" type="rotate" from="0 {cx} 366" to="360 {cx} 366" dur="4.8s" repeatCount="indefinite"/>'
+            + ''.join(f'<rect x="{cx - 1}" y="357" width="2" height="7" fill="#3A4558" transform="rotate({a} {cx} 366)"/>' for a in (0, 120, 240))
+            + '</g>')
+        add(f'<circle cx="{cx}" cy="366" r="3" fill="{GOLD}"/>')
     add('</g>')
-    add('</g></g>')
-
-    # mug -------------------------------------------------------------------------------------------
-    add(r(846, 352, 24, 28, "#d8dde8", 'rx="3"'))
-    add('<path d="M870 358 h4 a6 6 0 0 1 0 14 h-4" fill="none" stroke="#d8dde8" stroke-width="4"/>')
-    for i in range(3):
-        add(f'<circle class="smoke" cx="{852 + i * 6}" cy="348" r="3" fill="#cfd8e8" '
-            f'style="animation-delay:{-i * 1.05:.2f}s" filter="url(#soft)"/>')
 
     # bench power supply -------------------------------------------------------------------------------
     add(r(880, 318, 116, 62, "#cfd4de", 'rx="3"'))
@@ -594,19 +538,6 @@ def hero() -> str:
         add(f'<circle class="smoke" cx="1186" cy="250" r="3.5" fill="#cfd8e8" '
             f'style="animation-delay:{-i * 0.8:.2f}s" filter="url(#soft)"/>')
 
-    # micromouse patrolling the floor -------------------------------------------------------------------------
-    add('<g>')
-    add('<animateTransform attributeName="transform" type="translate" values="-80 0;1260 0" dur="14s" repeatCount="indefinite"/>')
-    add(r(0, 446, 44, 18, "#0e5a3a", 'rx="4"'))           # PCB chassis
-    add(r(6, 449, 14, 10, "#1a1a1a"))                     # MCU
-    add(r(24, 450, 12, 6, "#d9c64a"))
-    add(r(4, 462, 12, 6, "#222"))                          # wheels
-    add(r(28, 462, 12, 6, "#222"))
-    add(f'<rect class="blink-fast" x="44" y="448" width="4" height="4" fill="{RED}"/>')
-    add(f'<rect class="blink-fast" x="44" y="458" width="4" height="4" fill="{RED}" style="animation-delay:-.25s"/>')
-    add(f'<path d="M48 450 L70 444 M48 460 L70 466" stroke="{RED}" stroke-opacity=".35" stroke-width="2"/>')
-    add('</g>')
-
     # ticker -----------------------------------------------------------------------------------------------------
     add(r(0, 472, W, 28, "#03060d"))
     add(r(0, 472, W, 1, CYAN_DIM))
@@ -635,14 +566,14 @@ def footer() -> str:
     @keyframes b {{ 50% {{ opacity: .15 }} }}
   </style>
   <defs><filter id="g"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
-  <path d="M0 40 H360 L390 70 H560" fill="none" stroke="#c8483f" stroke-width="3"/>
-  <path d="M1200 40 H840 L810 70 H640" fill="none" stroke="#3f6fd1" stroke-width="3"/>
+  <path d="M0 40 H360 L390 70 H560" fill="none" stroke="{COPPER}" stroke-width="3"/>
+  <path d="M1200 40 H840 L810 70 H640" fill="none" stroke="#2F6FB0" stroke-width="3"/>
   <path class="p" d="M0 40 H360 L390 70 H560" fill="none" stroke="#eaffff" stroke-width="3" filter="url(#g)"/>
   <path class="p p2" d="M1200 40 H840 L810 70 H640" fill="none" stroke="#eaffff" stroke-width="3" filter="url(#g)"/>
   <rect x="560" y="50" width="80" height="40" rx="3" fill="#111" stroke="#555"/>
-  {''.join(f'<rect x="{566 + i * 12}" y="44" width="6" height="6" fill="#d9c64a"/><rect x="{566 + i * 12}" y="90" width="6" height="6" fill="#d9c64a"/>' for i in range(6))}
+  {''.join(f'<rect x="{566 + i * 12}" y="44" width="6" height="6" fill="#C9A227"/><rect x="{566 + i * 12}" y="90" width="6" height="6" fill="#C9A227"/>' for i in range(6))}
   <text x="600" y="74" font-size="11" fill="#bbb" text-anchor="middle">MM-29</text>
-  <circle cx="360" cy="40" r="5" fill="#d9c64a"/><circle cx="840" cy="40" r="5" fill="#d9c64a"/>
+  <circle cx="360" cy="40" r="5" fill="#C9A227"/><circle cx="840" cy="40" r="5" fill="#C9A227"/>
   <circle class="blink" cx="600" cy="62" r="2.5" fill="{GREEN}"/>
   <text x="600" y="114" font-size="12" fill="{TEXT_DIM}" text-anchor="middle" letter-spacing="3">MADUKZ SPACE · END OF DATASHEET · BUILT ON A BENCH IN SRI LANKA</text>
 </svg>"""
