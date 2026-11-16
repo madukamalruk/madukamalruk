@@ -158,6 +158,8 @@ def hero() -> str:
       .ticker {{ animation: ticker 38s linear infinite; }}
       @keyframes ticker {{ from {{transform:translateX(0)}} to {{transform:translateX(-1240px)}} }}
       .cursor {{ animation: blink 1s steps(1) infinite; }}
+      .breathe {{ animation: breathe 4.5s ease-in-out infinite; }}
+      @keyframes breathe {{ 50% {{ transform: translateY(-1.5px) }} }}
     </style>"""
 
     defs = f"""
@@ -217,7 +219,7 @@ def hero() -> str:
     # sign power cable
     add(f'<path d="M636 74 C670 74 668 140 700 150" fill="none" stroke="#111b2e" stroke-width="4"/>')
     add(f'<text x="40" y="136" font-size="13" fill="{TEXT_DIM}" letter-spacing="2">'
-        f'REF·MM-LAB  //  ELECTRICAL ENGINEERING · ROBOTICS · EMBEDDED SYSTEMS</text>')
+        f'ELECTRICAL ENGINEERING · ROBOTICS · EMBEDDED SYSTEMS</text>')
 
     # wall clock -----------------------------------------------------------------
     add(f'<circle cx="716" cy="74" r="30" fill="#0a1222" stroke="{STEEL_HI}" stroke-width="4"/>')
@@ -234,7 +236,6 @@ def hero() -> str:
     # high-voltage warning plate ---------------------------------------------------
     add(f'<path d="M800 50 L832 106 L768 106 Z" fill="{AMBER}" stroke="#1a1a1a" stroke-width="3"/>')
     add('<path class="bolt" d="M804 64 L790 88 L800 88 L794 102 L812 80 L802 80 L808 64 Z" fill="#1a1a1a"/>')
-    add(f'<text x="800" y="124" font-size="10" fill="{AMBER}" text-anchor="middle" letter-spacing="1">DANGER 11kV</text>')
 
     # window with night sky ----------------------------------------------------------
     add(r(904, 26, 264, 168, STEEL, 'rx="4"'))
@@ -296,9 +297,8 @@ def hero() -> str:
     add(r(220, 186, 84, 46, "#1c2b4a", f'stroke="{LINE}" stroke-width="2"'))
     add(r(228, 194, 30, 22, "#0e1628"))
     add(r(232, 198, 22, 14, "#20262f"))
-    add(f'<text x="262" y="206" font-size="9" fill="{CYAN}">ESP32</text>')
-    add(f'<text x="262" y="218" font-size="9" fill="{TEXT_DIM}">-S3</text>')
-    add(f'<text x="230" y="228" font-size="7" fill="{TEXT_DIM}">DEVKIT·WROOM</text>')
+    add(r(264, 198, 30, 4, CYAN, 'opacity=".7"'))
+    add(r(264, 206, 20, 3, TEXT_DIM))
     add(r(306, 204, 22, 28, "#0d6c7a"))  # arduino leaning
     add(r(308, 206, 8, 6, "#d9dde6"))
     add(r(318, 216, 8, 8, "#111"))
@@ -328,7 +328,6 @@ def hero() -> str:
     add(f'<path d="{path}" fill="none" stroke="{CYAN}" stroke-width="2" stroke-dasharray="4 4" opacity=".35"/>')
     add(f'<g><rect x="-5" y="-5" width="10" height="10" fill="{CYAN}" filter="url(#glowC)"/>'
         f'<animateMotion path="{path}" dur="7s" repeatCount="indefinite" calcMode="linear"/></g>')
-    add(f'<text x="{px - 2}" y="{py + 112}" font-size="8" fill="{TEXT_DIM}">FIG.01  FLOOD-FILL</text>')
 
     # monitor: PCB layout --------------------------------------------------------------
     mx, my, mw, mh = 500, 150, 250, 172
@@ -338,7 +337,7 @@ def hero() -> str:
     add(r(mx, my, mw, 14, "#1a2742"))
     for i, c in enumerate((RED, AMBER, GREEN)):
         add(f'<circle cx="{mx + 8 + i * 10}" cy="{my + 7}" r="3" fill="{c}"/>')
-    add(f'<text x="{mx + 42}" y="{my + 10}" font-size="8" fill="#9fb3d9">neomouse_v2.kicad_pcb — PCB Editor</text>')
+    add(r(mx + 44, my + 5, 84, 4, "#3a4a6e"))
     # board outline
     bx, by = mx + 16, my + 24
     add(r(bx, by, 170, 124, "#0b2a22", 'stroke="#d9c64a" stroke-width="1.5"'))
@@ -365,15 +364,14 @@ def hero() -> str:
     for (vx, vy) in [(20, 20), (20, 40), (150, 20), (30, 104), (140, 104), (120, 50), (100, 80)]:
         add(f'<circle cx="{bx + vx}" cy="{by + vy}" r="3.5" fill="#d9c64a"/>'
             f'<circle cx="{bx + vx}" cy="{by + vy}" r="1.4" fill="#06101e"/>')
-    add(f'<text x="{bx + 68}" y="{by + 74}" font-size="7" fill="#bbb">STM32</text>')
     # side panel (layers)
     lx = mx + 196
     for i, (name, col) in enumerate([("F.Cu", "#c8483f"), ("B.Cu", "#3f6fd1"), ("F.Silk", "#d9c64a"),
                                      ("Edge", "#d9c64a"), ("F.Mask", "#9a4fd6")]):
         add(r(lx, by + 4 + i * 16, 8, 8, col))
-        add(f'<text x="{lx + 12}" y="{by + 11 + i * 16}" font-size="8" fill="#9fb3d9">{name}</text>')
-    add(f'<text x="{mx + 8}" y="{my + mh - 6}" font-size="8" fill="{GREEN}">DRC ✓ 0 errors · 0 unrouted</text>')
-    add(f'<rect class="cursor" x="{mx + 158}" y="{my + mh - 13}" width="5" height="9" fill="{GREEN}"/>')
+        add(r(lx + 12, by + 7 + i * 16, 24, 3, "#3a4a6e"))
+    add(r(mx + 8, my + mh - 11, 70, 4, GREEN, 'opacity=".6"'))
+    add(f'<rect class="cursor" x="{mx + 84}" y="{my + mh - 13}" width="5" height="9" fill="{GREEN}"/>')
     # stand
     add(r(606, 330, 38, 34, "#111a2c"))
     add(r(584, 364, 82, 8, "#18233a"))
@@ -389,8 +387,6 @@ def hero() -> str:
     add(f'<path d="M{sx + 92} {sy + 50} H{sx + 132} M{sx + 112} {sy + 50} V{sy + 64} M{sx + 104} {sy + 64} H{sx + 120} '
         f'M{sx + 104} {sy + 68} H{sx + 120} M{sx + 112} {sy + 68} V{sy + 80} M{sx + 106} {sy + 80} H{sx + 118}" '
         f'fill="none" stroke="{w}" stroke-width="1.6"/>')
-    add(f'<text x="{sx + 8}" y="{sy + 16}" font-size="8" fill="{w}">SALLEN-KEY  LPF</text>')
-    add(f'<text x="{sx + 8}" y="{sy + 88}" font-size="7" fill="#8fb3e6">fc = 1/(2π√R1R2C1C2)</text>')
 
     # right shelf ---------------------------------------------------------------------------
     add(r(984, 252, 196, 8, WOOD_HI))
@@ -401,7 +397,6 @@ def hero() -> str:
     add('<path d="M1004 214 h28 v8 a14 14 0 0 1 -28 0 Z" fill="#f2c14e"/>')
     add(r(1014, 234, 8, 8, "#d9a43a"))
     add(r(1006, 242, 24, 10, "#4a3a20"))
-    add(f'<text x="1018" y="250" font-size="6" fill="#f2c14e" text-anchor="middle">MAZE</text>')
     add('<rect class="twinkle" x="1010" y="216" width="3" height="3" fill="#fff"/>')
     # books
     for i, (lbl, col, h) in enumerate([("PID", "#c8483f", 44), ("DSP", "#3f6fd1", 40), ("EMAG", "#1f8a6a", 46),
@@ -409,8 +404,7 @@ def hero() -> str:
         bx3 = 1044 + i * 16
         add(r(bx3, 252 - h, 14, h, col))
         add(r(bx3, 252 - h + 4, 14, 2, "#00000055"))
-        add(f'<text x="{bx3 + 7}" y="{252 - 6}" font-size="6" fill="#f3f3f3" text-anchor="middle" '
-            f'transform="rotate(-90 {bx3 + 7} {252 - 6})">{lbl}</text>')
+        add(r(bx3 + 3, 252 - 14, 8, 3, "#f3f3f3", 'opacity=".55"'))
     # little bot
     add(r(1130, 222, 30, 30, "#2a3a5c", 'rx="3"'))
     add(r(1136, 230, 6, 6, CYAN, 'class="blink-slow"'))
@@ -442,8 +436,6 @@ def hero() -> str:
     add(f'<path class="scope" d="{sine_path(44, 312, 14, 40, 200)}" fill="none" stroke="{GREEN}" stroke-width="2" filter="url(#glowC)"/>')
     add(f'<path class="scope2" d="{square_path(44, 334, 350, 24, 220)}" fill="none" stroke="{AMBER}" stroke-width="1.6" opacity=".9"/>')
     add("</g>")
-    add(f'<text x="46" y="296" font-size="7" fill="{GREEN}">CH1 2V/div</text>')
-    add(f'<text x="114" y="296" font-size="7" fill="{AMBER}">CH2 PWM</text>')
     for i, (kx, ky) in enumerate([(184, 294), (212, 294), (184, 326), (212, 326)]):
         add(f'<circle cx="{kx}" cy="{ky}" r="9" fill="#0d1424" stroke="{STEEL_HI}" stroke-width="2"/>')
         add(r(kx - 1, ky - 8, 2, 6, "#cfd8e8"))
@@ -461,21 +453,17 @@ def hero() -> str:
     readings = [("12.04", "V DC"), ("3.301", "V DC"), ("0.472", "A"), ("4.70k", "Ω")]
     for i, (val, unit) in enumerate(readings):
         add(f'<g class="rd" style="animation-delay:{-12 + i * 3}s">'
-            f'<text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">{val}</text>'
-            f'<text x="326" y="276" font-size="6" fill="#1b2116" text-anchor="end">{unit}</text></g>')
-    add('<text x="266" y="272" font-size="5" fill="#1b2116">AUTO</text>')
+            f'<text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">{val}</text></g>')
     # rotary dial
     add('<circle cx="296" cy="330" r="24" fill="#1a1e27" stroke="#4a5164" stroke-width="2"/>')
     for k, lbl in enumerate(["V", "V~", "A", "Ω"]):
         a = math.radians(-60 + k * 40)
-        add(f'<text x="{296 + 32 * math.sin(a):.0f}" y="{330 - 30 * math.cos(a) + 3:.0f}" font-size="7" '
-            f'fill="#e9edf5" text-anchor="middle">{lbl}</text>')
+        add(f'<circle cx="{296 + 30 * math.sin(a):.1f}" cy="{330 - 30 * math.cos(a):.1f}" r="2" fill="#e9edf5"/>')
     add(f'<g><rect x="293" y="310" width="6" height="22" fill="#e9edf5" rx="2"/>'
         f'<animateTransform attributeName="transform" type="rotate" values="-60 296 330;-60 296 330;-60 296 330;20 296 330;60 296 330" '
         f'keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="12s" repeatCount="indefinite"/></g>')
     for k, col in enumerate(["#111", "#c22", "#c22"]):
         add(f'<circle cx="{272 + k * 24}" cy="362" r="5" fill="#0b0d12" stroke="{col}" stroke-width="2"/>')
-    add('<text x="296" y="252" font-size="6" fill="#3b2a00" text-anchor="middle">TRUE-RMS 6000</text>')
 
     # probe leads to breadboard
     add('<path d="M272 362 C262 398 340 404 386 360" fill="none" stroke="#1c1c1c" stroke-width="3" shape-rendering="geometricPrecision"/>')
@@ -493,7 +481,6 @@ def hero() -> str:
         add(r(x + 1, 352, 2, 4, "#888"))
         add(r(x + 5, 352, 2, 4, "#888"))
     add(r(462, 356, 26, 10, "#1a1a1a"))  # 555 timer
-    add(f'<text x="466" y="364" font-size="6" fill="#ccc">NE555</text>')
     add(f'<path d="M396 360 C400 344 420 344 424 360" fill="none" stroke="#2b7de9" stroke-width="2" shape-rendering="geometricPrecision"/>')
     add(f'<path d="M440 372 C452 356 476 356 494 372" fill="none" stroke="#e9a12b" stroke-width="2" shape-rendering="geometricPrecision"/>')
 
@@ -510,31 +497,62 @@ def hero() -> str:
             k += 1
 
     # engineer (seen from behind) -------------------------------------------------------------------
-    add('<g>')
-    add(r(704, 300, 112, 140, "#202a40", 'rx="14"'))   # chair back
-    add(r(712, 308, 96, 124, "#2b3654", 'rx="10"'))
-    add(r(718, 322, 86, 118, "#1c3f5c", 'rx="18"'))    # hoodie
-    add(r(730, 322, 62, 10, "#235070", 'rx="4"'))
-    add('<path d="M720 344 C700 352 690 362 676 368" stroke="#1c3f5c" stroke-width="16" fill="none" stroke-linecap="round" shape-rendering="geometricPrecision"/>')
-    add('<g class="hand"><rect x="666" y="362" width="14" height="8" fill="#c98d6a" rx="3"/></g>')
-    add(r(746, 300, 30, 24, "#c98d6a"))                # neck
-    add(r(734, 254, 56, 52, "#1b120e", 'rx="18"'))     # hair
-    add(r(740, 248, 12, 12, "#1b120e"))
-    add(r(764, 246, 16, 12, "#1b120e"))
-    add(r(730, 276, 8, 18, "#c98d6a", 'rx="3"'))       # ear
-    add(f'<path d="M732 284 C730 236 794 236 792 284" fill="none" stroke="{STEEL_HI}" stroke-width="6" shape-rendering="geometricPrecision"/>')
-    add(r(726, 274, 12, 22, "#11192b", 'rx="4"'))
-    add(r(786, 274, 12, 22, "#11192b", 'rx="4"'))
-    add(f'<rect class="blink-slow" x="729" y="280" width="3" height="3" fill="{CYAN}"/>')
-    add(f'<text x="761" y="392" font-size="9" fill="#5fa3c9" text-anchor="middle" letter-spacing="1">EE·UoM</text>')
+    SKIN, SKIN_LO = "#c48a66", "#9e6a4c"
+    HOOD, HOOD_LO, HOOD_HI = "#1f4c6e", "#173b57", "#2a628a"
+    HAIR, HAIR_HI = "#1a120d", "#3d2a1f"
+    add('<g shape-rendering="geometricPrecision"><g class="breathe">')
+    # right arm on the mouse (behind the torso)
+    add(f'<path d="M796 334 C810 344 818 356 822 366" stroke="{HOOD_LO}" stroke-width="14" fill="none" stroke-linecap="round"/>')
+    add('<ellipse cx="830" cy="375" rx="9" ry="5" fill="#141c2f"/>')
+    add(f'<path d="M826 372 h8" stroke="{CYAN}" stroke-width="1.5" opacity=".7"/>')
+    add(f'<ellipse cx="826" cy="369" rx="7" ry="5" fill="{SKIN}"/>')
+    # torso / hoodie
+    add(f'<path d="M714 342 C716 325 732 316 748 314 H772 C788 316 804 325 806 342 L812 392 H708 Z" fill="{HOOD}"/>')
+    add(f'<path d="M788 317 C800 323 805 332 806 342 L812 392 H790 C792 360 792 336 788 317 Z" fill="{HOOD_LO}"/>')
+    add(f'<path d="M722 330 C728 322 738 318 748 316 L746 324 C737 326 729 331 724 338 Z" fill="{HOOD_HI}" opacity=".8"/>')
+    add(f'<path d="M760 334 V388" stroke="{HOOD_LO}" stroke-width="1.5"/>')
+    add(f'<path d="M732 350 C740 354 748 352 752 346 M768 346 C772 352 780 354 788 350" stroke="{HOOD_LO}" stroke-width="1.5" fill="none" opacity=".8"/>')
+    # left arm reaching for the keyboard
+    add(f'<path d="M726 334 C710 344 698 356 686 364" stroke="{HOOD}" stroke-width="15" fill="none" stroke-linecap="round"/>')
+    add(f'<path d="M724 342 C712 352 702 360 690 368" stroke="{HOOD_LO}" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>')
+    add(f'<circle cx="687" cy="365" r="7" fill="{HOOD_HI}"/>')
+    add(f'<g class="hand"><ellipse cx="676" cy="368" rx="8" ry="5" fill="{SKIN}"/>'
+        f'<path d="M670 370 h10" stroke="{SKIN_LO}" stroke-width="1"/></g>')
+    # chair back in front of the lower torso
+    add('<path d="M712 374 Q712 358 728 356 H792 Q808 358 808 374 V440 H712 Z" fill="#161d2f"/>')
+    add('<path d="M720 376 Q720 365 732 364 H788 Q800 365 800 376 V440 H720 Z" fill="#202a42"/>')
+    add(f'<path d="M726 372 V432 M794 372 V432" stroke="{CYAN}" stroke-width="2" opacity=".45"/>')
+    add('<path d="M736 380 H784" stroke="#2c3858" stroke-width="2"/>')
+    # neck + folded hood
+    add(f'<path d="M750 292 H770 V318 H750 Z" fill="{SKIN}"/>')
+    add(f'<path d="M750 292 H770 V302 H750 Z" fill="{SKIN_LO}"/>')
+    add(f'<path d="M738 316 C738 302 782 302 782 316 C782 330 738 330 738 316 Z" fill="{HOOD_HI}"/>')
+    add(f'<path d="M749 315 C749 309 771 309 771 315 C771 320 749 320 749 315 Z" fill="#163b58"/>')
+    # head (slow look left / right)
+    add('<g><animateTransform attributeName="transform" type="rotate" '
+        'values="0 760 300;-2.5 760 300;0 760 300;0 760 300;2 760 300;0 760 300" dur="9s" repeatCount="indefinite"/>')
+    add(f'<ellipse cx="760" cy="268" rx="26" ry="30" fill="{HAIR}"/>')
+    add(f'<path d="M738 284 C740 298 750 302 760 302 C770 302 780 298 782 284 Z" fill="{HAIR}"/>')
+    add(f'<path d="M744 250 L748 241 L754 247 L760 239 L766 247 L772 241 L776 250 Z" fill="{HAIR}"/>')
+    for d in ("M748 248 C744 262 744 276 748 292", "M760 242 C758 258 758 280 760 298",
+              "M772 248 C776 262 776 276 772 292", "M754 246 C752 262 752 280 754 296"):
+        add(f'<path d="{d}" stroke="{HAIR_HI}" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/>')
+    add('<path d="M742 258 C748 246 760 241 772 246" stroke="#5a3e2c" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>')
+    # headphones
+    add('<path d="M736 276 C732 232 788 232 784 276" stroke="#2c3a5a" stroke-width="7" fill="none" stroke-linecap="round"/>')
+    add('<path d="M738 272 C736 238 784 238 782 272" stroke="#4a5d86" stroke-width="1.5" fill="none" opacity=".8"/>')
+    add('<rect x="723" y="264" width="17" height="30" rx="7" fill="#141c2f" stroke="#2c3a5a" stroke-width="2"/>')
+    add('<rect x="780" y="264" width="17" height="30" rx="7" fill="#141c2f" stroke="#2c3a5a" stroke-width="2"/>')
+    add(f'<rect class="twinkle" x="726" y="270" width="3" height="18" rx="1.5" fill="{CYAN}" filter="url(#glowC)"/>')
+    add(f'<rect class="twinkle" x="791" y="270" width="3" height="18" rx="1.5" fill="{CYAN}" filter="url(#glowC)" style="animation-delay:-1.5s"/>')
     add('</g>')
+    add('</g></g>')
 
     # mug -------------------------------------------------------------------------------------------
-    add(r(834, 352, 26, 28, "#d8dde8", 'rx="3"'))
-    add('<path d="M860 358 h6 a6 6 0 0 1 0 14 h-6" fill="none" stroke="#d8dde8" stroke-width="4"/>')
-    add(f'<text x="847" y="370" font-size="7" fill="#c8483f" text-anchor="middle">Ω</text>')
+    add(r(846, 352, 24, 28, "#d8dde8", 'rx="3"'))
+    add('<path d="M870 358 h4 a6 6 0 0 1 0 14 h-4" fill="none" stroke="#d8dde8" stroke-width="4"/>')
     for i in range(3):
-        add(f'<circle class="smoke" cx="{842 + i * 6}" cy="348" r="3" fill="#cfd8e8" '
+        add(f'<circle class="smoke" cx="{852 + i * 6}" cy="348" r="3" fill="#cfd8e8" '
             f'style="animation-delay:{-i * 1.05:.2f}s" filter="url(#soft)"/>')
 
     # bench power supply -------------------------------------------------------------------------------
@@ -542,10 +560,7 @@ def hero() -> str:
     add(r(886, 324, 104, 30, "#0b0f16"))
     add(f'<text x="892" y="344" font-size="15" font-weight="700" fill="{RED}" filter="url(#glowA)">05.00</text>')
     add(f'<text x="944" y="344" font-size="15" font-weight="700" fill="{GREEN}" filter="url(#glowC)">0.25</text>')
-    add(f'<text x="934" y="351" font-size="5" fill="{RED}">V</text>')
-    add(f'<text x="983" y="351" font-size="5" fill="{GREEN}">A</text>')
     add(f'<circle class="blink-slow" cx="892" cy="366" r="3" fill="{GREEN}"/>')
-    add('<text x="899" y="368" font-size="6" fill="#333">CV</text>')
     for k, col in enumerate(["#d23030", "#1c1c1c", "#1f8a3a"]):
         add(f'<circle cx="{938 + k * 18}" cy="366" r="6" fill="{col}" stroke="#666" stroke-width="1"/>')
 
@@ -595,12 +610,11 @@ def hero() -> str:
     # ticker -----------------------------------------------------------------------------------------------------
     add(r(0, 472, W, 28, "#03060d"))
     add(r(0, 472, W, 1, CYAN_DIM))
-    msg = ("● ONLINE  ·  BSc (Hons) ELECTRICAL ENGINEERING @ UNIVERSITY OF MORATUWA  ·  "
-           "NOW BUILDING: NEOMOUSE V2 MICROMOUSE  ·  STACK: EMBEDDED C++ · PID · KiCad · MATLAB  ·  "
-           "OPEN TO INTERNSHIPS &amp; COLLABORATIONS  ·  ")
+    msg = ("● ONLINE  ·  ELECTRICAL ENGINEERING @ UNIVERSITY OF MORATUWA  ·  "
+           "NOW BUILDING: NEOMOUSE V2  ·  EMBEDDED C++ · PID · KiCad  ·  OPEN TO INTERNSHIPS  ·")
     add('<g clip-path="url(#tickerClip)"><g class="ticker">')
     for k in range(3):
-        add(f'<text x="{16 + k * 1240}" y="491" font-size="12" fill="{CYAN}" letter-spacing="1.5">{msg}</text>')
+        add(f'<text x="{20 + k * 1240}" y="491" font-size="12" fill="{CYAN}" textLength="1200" lengthAdjust="spacingAndGlyphs">{msg}</text>')
     add('</g></g>')
 
     add("</g>")  # frame clip

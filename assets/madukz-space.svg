@@ -43,6 +43,8 @@
       .ticker { animation: ticker 38s linear infinite; }
       @keyframes ticker { from {transform:translateX(0)} to {transform:translateX(-1240px)} }
       .cursor { animation: blink 1s steps(1) infinite; }
+      .breathe { animation: breathe 4.5s ease-in-out infinite; }
+      @keyframes breathe { 50% { transform: translateY(-1.5px) } }
     </style>
 
     <defs>
@@ -599,7 +601,7 @@
 <circle cx="622" cy="98" r="2.4" fill="#122038"/>
 </g>
 <path d="M636 74 C670 74 668 140 700 150" fill="none" stroke="#111b2e" stroke-width="4"/>
-<text x="40" y="136" font-size="13" fill="#5f7aa8" letter-spacing="2">REF·MM-LAB  //  ELECTRICAL ENGINEERING · ROBOTICS · EMBEDDED SYSTEMS</text>
+<text x="40" y="136" font-size="13" fill="#5f7aa8" letter-spacing="2">ELECTRICAL ENGINEERING · ROBOTICS · EMBEDDED SYSTEMS</text>
 <circle cx="716" cy="74" r="30" fill="#0a1222" stroke="#3c4a6b" stroke-width="4"/>
 <rect x="714.5" y="50.5" width="3" height="3" fill="#5f7aa8"/>
 <rect x="725.5" y="53.4" width="3" height="3" fill="#5f7aa8"/>
@@ -618,7 +620,6 @@
 <rect x="714" y="72" width="4" height="4" fill="#ffb52e" />
 <path d="M800 50 L832 106 L768 106 Z" fill="#ffb52e" stroke="#1a1a1a" stroke-width="3"/>
 <path class="bolt" d="M804 64 L790 88 L800 88 L794 102 L812 80 L802 80 L808 64 Z" fill="#1a1a1a"/>
-<text x="800" y="124" font-size="10" fill="#ffb52e" text-anchor="middle" letter-spacing="1">DANGER 11kV</text>
 <rect x="904" y="26" width="264" height="168" fill="#2a3550" rx="4"/>
 <rect x="912" y="34" width="248" height="152" fill="url(#sky)" />
 <rect class="twinkle" x="930" y="60" width="3" height="3" fill="#dbe8ff" style="animation-delay:0.00s"/>
@@ -692,9 +693,8 @@
 <rect x="220" y="186" width="84" height="46" fill="#1c2b4a" stroke="#1f3358" stroke-width="2"/>
 <rect x="228" y="194" width="30" height="22" fill="#0e1628" />
 <rect x="232" y="198" width="22" height="14" fill="#20262f" />
-<text x="262" y="206" font-size="9" fill="#3ee8ff">ESP32</text>
-<text x="262" y="218" font-size="9" fill="#5f7aa8">-S3</text>
-<text x="230" y="228" font-size="7" fill="#5f7aa8">DEVKIT·WROOM</text>
+<rect x="264" y="198" width="30" height="4" fill="#3ee8ff" opacity=".7"/>
+<rect x="264" y="206" width="20" height="3" fill="#5f7aa8" />
 <rect x="306" y="204" width="22" height="28" fill="#0d6c7a" />
 <rect x="308" y="206" width="8" height="6" fill="#d9dde6" />
 <rect x="318" y="216" width="8" height="8" fill="#111" />
@@ -719,7 +719,6 @@
 <rect x="404" y="198" width="12" height="12" fill="#3d2a0c" />
 <path d="M370,244 L370,164 L390,164 L410,164 L410,184 L430,184 L430,204 L450,204 L450,224 L430,224 L410,224 L410,204" fill="none" stroke="#3ee8ff" stroke-width="2" stroke-dasharray="4 4" opacity=".35"/>
 <g><rect x="-5" y="-5" width="10" height="10" fill="#3ee8ff" filter="url(#glowC)"/><animateMotion path="M370,244 L370,164 L390,164 L410,164 L410,184 L430,184 L430,204 L450,204 L450,224 L430,224 L410,224 L410,204" dur="7s" repeatCount="indefinite" calcMode="linear"/></g>
-<text x="358" y="266" font-size="8" fill="#5f7aa8">FIG.01  FLOOD-FILL</text>
 <rect x="492" y="142" width="266" height="188" fill="#111a2c" rx="8"/>
 <rect x="492" y="142" width="266" height="188" fill="none" rx="8" stroke="#3ee8ff" stroke-opacity=".25" stroke-width="2"/>
 <rect x="500" y="150" width="250" height="172" fill="#06101e" />
@@ -727,7 +726,7 @@
 <circle cx="508" cy="157" r="3" fill="#ff4d5e"/>
 <circle cx="518" cy="157" r="3" fill="#ffb52e"/>
 <circle cx="528" cy="157" r="3" fill="#3dff8b"/>
-<text x="542" y="160" font-size="8" fill="#9fb3d9">neomouse_v2.kicad_pcb — PCB Editor</text>
+<rect x="544" y="155" width="84" height="4" fill="#3a4a6e" />
 <rect x="516" y="174" width="170" height="124" fill="#0b2a22" stroke="#d9c64a" stroke-width="1.5"/>
 <path d="M536 194 H586 V224 H636" fill="none" stroke="#c8483f" stroke-width="3"/>
 <path d="M536 214 H566 V264 H656 V244" fill="none" stroke="#3f6fd1" stroke-width="3"/>
@@ -757,19 +756,18 @@
 <circle cx="656" cy="278" r="3.5" fill="#d9c64a"/><circle cx="656" cy="278" r="1.4" fill="#06101e"/>
 <circle cx="636" cy="224" r="3.5" fill="#d9c64a"/><circle cx="636" cy="224" r="1.4" fill="#06101e"/>
 <circle cx="616" cy="254" r="3.5" fill="#d9c64a"/><circle cx="616" cy="254" r="1.4" fill="#06101e"/>
-<text x="584" y="248" font-size="7" fill="#bbb">STM32</text>
 <rect x="696" y="178" width="8" height="8" fill="#c8483f" />
-<text x="708" y="185" font-size="8" fill="#9fb3d9">F.Cu</text>
+<rect x="708" y="181" width="24" height="3" fill="#3a4a6e" />
 <rect x="696" y="194" width="8" height="8" fill="#3f6fd1" />
-<text x="708" y="201" font-size="8" fill="#9fb3d9">B.Cu</text>
+<rect x="708" y="197" width="24" height="3" fill="#3a4a6e" />
 <rect x="696" y="210" width="8" height="8" fill="#d9c64a" />
-<text x="708" y="217" font-size="8" fill="#9fb3d9">F.Silk</text>
+<rect x="708" y="213" width="24" height="3" fill="#3a4a6e" />
 <rect x="696" y="226" width="8" height="8" fill="#d9c64a" />
-<text x="708" y="233" font-size="8" fill="#9fb3d9">Edge</text>
+<rect x="708" y="229" width="24" height="3" fill="#3a4a6e" />
 <rect x="696" y="242" width="8" height="8" fill="#9a4fd6" />
-<text x="708" y="249" font-size="8" fill="#9fb3d9">F.Mask</text>
-<text x="508" y="316" font-size="8" fill="#3dff8b">DRC ✓ 0 errors · 0 unrouted</text>
-<rect class="cursor" x="658" y="309" width="5" height="9" fill="#3dff8b"/>
+<rect x="708" y="245" width="24" height="3" fill="#3a4a6e" />
+<rect x="508" y="311" width="70" height="4" fill="#3dff8b" opacity=".6"/>
+<rect class="cursor" x="584" y="309" width="5" height="9" fill="#3dff8b"/>
 <rect x="606" y="330" width="38" height="34" fill="#111a2c" />
 <rect x="584" y="364" width="82" height="8" fill="#18233a" />
 <rect x="822" y="208" width="144" height="96" fill="#123a6b" stroke="#2e5c96" stroke-width="2"/>
@@ -777,8 +775,6 @@
 <path d="M832 258 H844 l3 -6 l5 12 l5 -12 l5 12 l5 -12 l3 6 H886" fill="none" stroke="#dfeaff" stroke-width="1.6" shape-rendering="geometricPrecision"/>
 <path d="M886 246 V270 L914 258 Z" fill="none" stroke="#dfeaff" stroke-width="1.6"/>
 <path d="M914 258 H954 M934 258 V272 M926 272 H942 M926 276 H942 M934 276 V288 M928 288 H940" fill="none" stroke="#dfeaff" stroke-width="1.6"/>
-<text x="830" y="224" font-size="8" fill="#dfeaff">SALLEN-KEY  LPF</text>
-<text x="830" y="296" font-size="7" fill="#8fb3e6">fc = 1/(2π√R1R2C1C2)</text>
 <rect x="984" y="252" width="196" height="8" fill="#8a5a35" />
 <rect x="984" y="260" width="196" height="4" fill="#4a2e1b" />
 <rect x="1000" y="264" width="6" height="12" fill="#2a3550" />
@@ -786,23 +782,22 @@
 <path d="M1004 214 h28 v8 a14 14 0 0 1 -28 0 Z" fill="#f2c14e"/>
 <rect x="1014" y="234" width="8" height="8" fill="#d9a43a" />
 <rect x="1006" y="242" width="24" height="10" fill="#4a3a20" />
-<text x="1018" y="250" font-size="6" fill="#f2c14e" text-anchor="middle">MAZE</text>
 <rect class="twinkle" x="1010" y="216" width="3" height="3" fill="#fff"/>
 <rect x="1044" y="208" width="14" height="44" fill="#c8483f" />
 <rect x="1044" y="212" width="14" height="2" fill="#00000055" />
-<text x="1051" y="246" font-size="6" fill="#f3f3f3" text-anchor="middle" transform="rotate(-90 1051 246)">PID</text>
+<rect x="1047" y="238" width="8" height="3" fill="#f3f3f3" opacity=".55"/>
 <rect x="1060" y="212" width="14" height="40" fill="#3f6fd1" />
 <rect x="1060" y="216" width="14" height="2" fill="#00000055" />
-<text x="1067" y="246" font-size="6" fill="#f3f3f3" text-anchor="middle" transform="rotate(-90 1067 246)">DSP</text>
+<rect x="1063" y="238" width="8" height="3" fill="#f3f3f3" opacity=".55"/>
 <rect x="1076" y="206" width="14" height="46" fill="#1f8a6a" />
 <rect x="1076" y="210" width="14" height="2" fill="#00000055" />
-<text x="1083" y="246" font-size="6" fill="#f3f3f3" text-anchor="middle" transform="rotate(-90 1083 246)">EMAG</text>
+<rect x="1079" y="238" width="8" height="3" fill="#f3f3f3" opacity=".55"/>
 <rect x="1092" y="214" width="14" height="38" fill="#7a4fd6" />
 <rect x="1092" y="218" width="14" height="2" fill="#00000055" />
-<text x="1099" y="246" font-size="6" fill="#f3f3f3" text-anchor="middle" transform="rotate(-90 1099 246)">C++</text>
+<rect x="1095" y="238" width="8" height="3" fill="#f3f3f3" opacity=".55"/>
 <rect x="1108" y="210" width="14" height="42" fill="#d98a2b" />
 <rect x="1108" y="214" width="14" height="2" fill="#00000055" />
-<text x="1115" y="246" font-size="6" fill="#f3f3f3" text-anchor="middle" transform="rotate(-90 1115 246)">CTRL</text>
+<rect x="1111" y="238" width="8" height="3" fill="#f3f3f3" opacity=".55"/>
 <rect x="1130" y="222" width="30" height="30" fill="#2a3a5c" rx="3"/>
 <rect x="1136" y="230" width="6" height="6" fill="#3ee8ff" class="blink-slow"/>
 <rect x="1148" y="230" width="6" height="6" fill="#3ee8ff" class="blink-slow"/>
@@ -865,8 +860,6 @@
 <path class="scope" d="M44.0,312.0 L46.0,316.3 L48.0,320.2 L50.0,323.3 L52.0,325.3 L54.0,326.0 L56.0,325.3 L58.0,323.3 L60.0,320.2 L62.0,316.3 L64.0,312.0 L66.0,307.7 L68.0,303.8 L70.0,300.7 L72.0,298.7 L74.0,298.0 L76.0,298.7 L78.0,300.7 L80.0,303.8 L82.0,307.7 L84.0,312.0 L86.0,316.3 L88.0,320.2 L90.0,323.3 L92.0,325.3 L94.0,326.0 L96.0,325.3 L98.0,323.3 L100.0,320.2 L102.0,316.3 L104.0,312.0 L106.0,307.7 L108.0,303.8 L110.0,300.7 L112.0,298.7 L114.0,298.0 L116.0,298.7 L118.0,300.7 L120.0,303.8 L122.0,307.7 L124.0,312.0 L126.0,316.3 L128.0,320.2 L130.0,323.3 L132.0,325.3 L134.0,326.0 L136.0,325.3 L138.0,323.3 L140.0,320.2 L142.0,316.3 L144.0,312.0 L146.0,307.7 L148.0,303.8 L150.0,300.7 L152.0,298.7 L154.0,298.0 L156.0,298.7 L158.0,300.7 L160.0,303.8 L162.0,307.7 L164.0,312.0 L166.0,316.3 L168.0,320.2 L170.0,323.3 L172.0,325.3 L174.0,326.0 L176.0,325.3 L178.0,323.3 L180.0,320.2 L182.0,316.3 L184.0,312.0 L186.0,307.7 L188.0,303.8 L190.0,300.7 L192.0,298.7 L194.0,298.0 L196.0,298.7 L198.0,300.7 L200.0,303.8 L202.0,307.7 L204.0,312.0 L206.0,316.3 L208.0,320.2 L210.0,323.3 L212.0,325.3 L214.0,326.0 L216.0,325.3 L218.0,323.3 L220.0,320.2 L222.0,316.3 L224.0,312.0 L226.0,307.7 L228.0,303.8 L230.0,300.7 L232.0,298.7 L234.0,298.0 L236.0,298.7 L238.0,300.7 L240.0,303.8 L242.0,307.7 L244.0,312.0" fill="none" stroke="#3dff8b" stroke-width="2" filter="url(#glowC)"/>
 <path class="scope2" d="M44,350 L44,350 L68,350 L68,334 L92,334 L92,350 L116,350 L116,334 L140,334 L140,350 L164,350 L164,334 L188,334 L188,350 L212,350 L212,334 L236,334 L236,350 L260,350 L260,334 L284,334" fill="none" stroke="#ffb52e" stroke-width="1.6" opacity=".9"/>
 </g>
-<text x="46" y="296" font-size="7" fill="#3dff8b">CH1 2V/div</text>
-<text x="114" y="296" font-size="7" fill="#ffb52e">CH2 PWM</text>
 <circle cx="184" cy="294" r="9" fill="#0d1424" stroke="#3c4a6b" stroke-width="2"/>
 <rect x="183" y="286" width="2" height="6" fill="#cfd8e8" />
 <circle cx="212" cy="294" r="9" fill="#0d1424" stroke="#3c4a6b" stroke-width="2"/>
@@ -886,21 +879,19 @@
 <rect x="254" y="256" width="84" height="116" fill="#2a2f3a" rx="6"/>
 <rect x="262" y="264" width="68" height="32" fill="#a8b89a" />
 <rect x="262" y="264" width="68" height="32" fill="none" stroke="#56604c" stroke-width="2"/>
-<g class="rd" style="animation-delay:-12s"><text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">12.04</text><text x="326" y="276" font-size="6" fill="#1b2116" text-anchor="end">V DC</text></g>
-<g class="rd" style="animation-delay:-9s"><text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">3.301</text><text x="326" y="276" font-size="6" fill="#1b2116" text-anchor="end">V DC</text></g>
-<g class="rd" style="animation-delay:-6s"><text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">0.472</text><text x="326" y="276" font-size="6" fill="#1b2116" text-anchor="end">A</text></g>
-<g class="rd" style="animation-delay:-3s"><text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">4.70k</text><text x="326" y="276" font-size="6" fill="#1b2116" text-anchor="end">Ω</text></g>
-<text x="266" y="272" font-size="5" fill="#1b2116">AUTO</text>
+<g class="rd" style="animation-delay:-12s"><text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">12.04</text></g>
+<g class="rd" style="animation-delay:-9s"><text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">3.301</text></g>
+<g class="rd" style="animation-delay:-6s"><text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">0.472</text></g>
+<g class="rd" style="animation-delay:-3s"><text x="268" y="287" font-size="17" font-weight="700" fill="#1b2116">4.70k</text></g>
 <circle cx="296" cy="330" r="24" fill="#1a1e27" stroke="#4a5164" stroke-width="2"/>
-<text x="268" y="318" font-size="7" fill="#e9edf5" text-anchor="middle">V</text>
-<text x="285" y="305" font-size="7" fill="#e9edf5" text-anchor="middle">V~</text>
-<text x="307" y="305" font-size="7" fill="#e9edf5" text-anchor="middle">A</text>
-<text x="324" y="318" font-size="7" fill="#e9edf5" text-anchor="middle">Ω</text>
+<circle cx="270.0" cy="315.0" r="2" fill="#e9edf5"/>
+<circle cx="285.7" cy="301.8" r="2" fill="#e9edf5"/>
+<circle cx="306.3" cy="301.8" r="2" fill="#e9edf5"/>
+<circle cx="322.0" cy="315.0" r="2" fill="#e9edf5"/>
 <g><rect x="293" y="310" width="6" height="22" fill="#e9edf5" rx="2"/><animateTransform attributeName="transform" type="rotate" values="-60 296 330;-60 296 330;-60 296 330;20 296 330;60 296 330" keyTimes="0;0.25;0.5;0.75;1" calcMode="discrete" dur="12s" repeatCount="indefinite"/></g>
 <circle cx="272" cy="362" r="5" fill="#0b0d12" stroke="#111" stroke-width="2"/>
 <circle cx="296" cy="362" r="5" fill="#0b0d12" stroke="#c22" stroke-width="2"/>
 <circle cx="320" cy="362" r="5" fill="#0b0d12" stroke="#c22" stroke-width="2"/>
-<text x="296" y="252" font-size="6" fill="#3b2a00" text-anchor="middle">TRUE-RMS 6000</text>
 <path d="M272 362 C262 398 340 404 386 360" fill="none" stroke="#1c1c1c" stroke-width="3" shape-rendering="geometricPrecision"/>
 <path d="M296 362 C300 404 420 410 452 352" fill="none" stroke="#d23030" stroke-width="3" shape-rendering="geometricPrecision"/>
 <rect x="382" y="344" width="6" height="18" fill="#1c1c1c" />
@@ -921,7 +912,6 @@
 <rect x="443" y="352" width="2" height="4" fill="#888" />
 <rect x="447" y="352" width="2" height="4" fill="#888" />
 <rect x="462" y="356" width="26" height="10" fill="#1a1a1a" />
-<text x="466" y="364" font-size="6" fill="#ccc">NE555</text>
 <path d="M396 360 C400 344 420 344 424 360" fill="none" stroke="#2b7de9" stroke-width="2" shape-rendering="geometricPrecision"/>
 <path d="M440 372 C452 356 476 356 494 372" fill="none" stroke="#e9a12b" stroke-width="2" shape-rendering="geometricPrecision"/>
 <rect x="528" y="368" width="158" height="12" fill="#141c2f" rx="2"/>
@@ -953,38 +943,55 @@
 <rect x="653" y="375" width="9" height="3" fill="#b07cff" class="key" style="animation-delay:-0.2s"/>
 <rect x="664" y="375" width="9" height="3" fill="#3ee8ff" class="key" style="animation-delay:-0.9s"/>
 <rect x="675" y="375" width="9" height="3" fill="#3ee8ff" class="key" style="animation-delay:-0.5s"/>
-<g>
-<rect x="704" y="300" width="112" height="140" fill="#202a40" rx="14"/>
-<rect x="712" y="308" width="96" height="124" fill="#2b3654" rx="10"/>
-<rect x="718" y="322" width="86" height="118" fill="#1c3f5c" rx="18"/>
-<rect x="730" y="322" width="62" height="10" fill="#235070" rx="4"/>
-<path d="M720 344 C700 352 690 362 676 368" stroke="#1c3f5c" stroke-width="16" fill="none" stroke-linecap="round" shape-rendering="geometricPrecision"/>
-<g class="hand"><rect x="666" y="362" width="14" height="8" fill="#c98d6a" rx="3"/></g>
-<rect x="746" y="300" width="30" height="24" fill="#c98d6a" />
-<rect x="734" y="254" width="56" height="52" fill="#1b120e" rx="18"/>
-<rect x="740" y="248" width="12" height="12" fill="#1b120e" />
-<rect x="764" y="246" width="16" height="12" fill="#1b120e" />
-<rect x="730" y="276" width="8" height="18" fill="#c98d6a" rx="3"/>
-<path d="M732 284 C730 236 794 236 792 284" fill="none" stroke="#3c4a6b" stroke-width="6" shape-rendering="geometricPrecision"/>
-<rect x="726" y="274" width="12" height="22" fill="#11192b" rx="4"/>
-<rect x="786" y="274" width="12" height="22" fill="#11192b" rx="4"/>
-<rect class="blink-slow" x="729" y="280" width="3" height="3" fill="#3ee8ff"/>
-<text x="761" y="392" font-size="9" fill="#5fa3c9" text-anchor="middle" letter-spacing="1">EE·UoM</text>
+<g shape-rendering="geometricPrecision"><g class="breathe">
+<path d="M796 334 C810 344 818 356 822 366" stroke="#173b57" stroke-width="14" fill="none" stroke-linecap="round"/>
+<ellipse cx="830" cy="375" rx="9" ry="5" fill="#141c2f"/>
+<path d="M826 372 h8" stroke="#3ee8ff" stroke-width="1.5" opacity=".7"/>
+<ellipse cx="826" cy="369" rx="7" ry="5" fill="#c48a66"/>
+<path d="M714 342 C716 325 732 316 748 314 H772 C788 316 804 325 806 342 L812 392 H708 Z" fill="#1f4c6e"/>
+<path d="M788 317 C800 323 805 332 806 342 L812 392 H790 C792 360 792 336 788 317 Z" fill="#173b57"/>
+<path d="M722 330 C728 322 738 318 748 316 L746 324 C737 326 729 331 724 338 Z" fill="#2a628a" opacity=".8"/>
+<path d="M760 334 V388" stroke="#173b57" stroke-width="1.5"/>
+<path d="M732 350 C740 354 748 352 752 346 M768 346 C772 352 780 354 788 350" stroke="#173b57" stroke-width="1.5" fill="none" opacity=".8"/>
+<path d="M726 334 C710 344 698 356 686 364" stroke="#1f4c6e" stroke-width="15" fill="none" stroke-linecap="round"/>
+<path d="M724 342 C712 352 702 360 690 368" stroke="#173b57" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
+<circle cx="687" cy="365" r="7" fill="#2a628a"/>
+<g class="hand"><ellipse cx="676" cy="368" rx="8" ry="5" fill="#c48a66"/><path d="M670 370 h10" stroke="#9e6a4c" stroke-width="1"/></g>
+<path d="M712 374 Q712 358 728 356 H792 Q808 358 808 374 V440 H712 Z" fill="#161d2f"/>
+<path d="M720 376 Q720 365 732 364 H788 Q800 365 800 376 V440 H720 Z" fill="#202a42"/>
+<path d="M726 372 V432 M794 372 V432" stroke="#3ee8ff" stroke-width="2" opacity=".45"/>
+<path d="M736 380 H784" stroke="#2c3858" stroke-width="2"/>
+<path d="M750 292 H770 V318 H750 Z" fill="#c48a66"/>
+<path d="M750 292 H770 V302 H750 Z" fill="#9e6a4c"/>
+<path d="M738 316 C738 302 782 302 782 316 C782 330 738 330 738 316 Z" fill="#2a628a"/>
+<path d="M749 315 C749 309 771 309 771 315 C771 320 749 320 749 315 Z" fill="#163b58"/>
+<g><animateTransform attributeName="transform" type="rotate" values="0 760 300;-2.5 760 300;0 760 300;0 760 300;2 760 300;0 760 300" dur="9s" repeatCount="indefinite"/>
+<ellipse cx="760" cy="268" rx="26" ry="30" fill="#1a120d"/>
+<path d="M738 284 C740 298 750 302 760 302 C770 302 780 298 782 284 Z" fill="#1a120d"/>
+<path d="M744 250 L748 241 L754 247 L760 239 L766 247 L772 241 L776 250 Z" fill="#1a120d"/>
+<path d="M748 248 C744 262 744 276 748 292" stroke="#3d2a1f" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/>
+<path d="M760 242 C758 258 758 280 760 298" stroke="#3d2a1f" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/>
+<path d="M772 248 C776 262 776 276 772 292" stroke="#3d2a1f" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/>
+<path d="M754 246 C752 262 752 280 754 296" stroke="#3d2a1f" stroke-width="1.6" fill="none" stroke-linecap="round" opacity=".8"/>
+<path d="M742 258 C748 246 760 241 772 246" stroke="#5a3e2c" stroke-width="2.5" fill="none" stroke-linecap="round" opacity=".6"/>
+<path d="M736 276 C732 232 788 232 784 276" stroke="#2c3a5a" stroke-width="7" fill="none" stroke-linecap="round"/>
+<path d="M738 272 C736 238 784 238 782 272" stroke="#4a5d86" stroke-width="1.5" fill="none" opacity=".8"/>
+<rect x="723" y="264" width="17" height="30" rx="7" fill="#141c2f" stroke="#2c3a5a" stroke-width="2"/>
+<rect x="780" y="264" width="17" height="30" rx="7" fill="#141c2f" stroke="#2c3a5a" stroke-width="2"/>
+<rect class="twinkle" x="726" y="270" width="3" height="18" rx="1.5" fill="#3ee8ff" filter="url(#glowC)"/>
+<rect class="twinkle" x="791" y="270" width="3" height="18" rx="1.5" fill="#3ee8ff" filter="url(#glowC)" style="animation-delay:-1.5s"/>
 </g>
-<rect x="834" y="352" width="26" height="28" fill="#d8dde8" rx="3"/>
-<path d="M860 358 h6 a6 6 0 0 1 0 14 h-6" fill="none" stroke="#d8dde8" stroke-width="4"/>
-<text x="847" y="370" font-size="7" fill="#c8483f" text-anchor="middle">Ω</text>
-<circle class="smoke" cx="842" cy="348" r="3" fill="#cfd8e8" style="animation-delay:0.00s" filter="url(#soft)"/>
-<circle class="smoke" cx="848" cy="348" r="3" fill="#cfd8e8" style="animation-delay:-1.05s" filter="url(#soft)"/>
-<circle class="smoke" cx="854" cy="348" r="3" fill="#cfd8e8" style="animation-delay:-2.10s" filter="url(#soft)"/>
+</g></g>
+<rect x="846" y="352" width="24" height="28" fill="#d8dde8" rx="3"/>
+<path d="M870 358 h4 a6 6 0 0 1 0 14 h-4" fill="none" stroke="#d8dde8" stroke-width="4"/>
+<circle class="smoke" cx="852" cy="348" r="3" fill="#cfd8e8" style="animation-delay:0.00s" filter="url(#soft)"/>
+<circle class="smoke" cx="858" cy="348" r="3" fill="#cfd8e8" style="animation-delay:-1.05s" filter="url(#soft)"/>
+<circle class="smoke" cx="864" cy="348" r="3" fill="#cfd8e8" style="animation-delay:-2.10s" filter="url(#soft)"/>
 <rect x="880" y="318" width="116" height="62" fill="#cfd4de" rx="3"/>
 <rect x="886" y="324" width="104" height="30" fill="#0b0f16" />
 <text x="892" y="344" font-size="15" font-weight="700" fill="#ff4d5e" filter="url(#glowA)">05.00</text>
 <text x="944" y="344" font-size="15" font-weight="700" fill="#3dff8b" filter="url(#glowC)">0.25</text>
-<text x="934" y="351" font-size="5" fill="#ff4d5e">V</text>
-<text x="983" y="351" font-size="5" fill="#3dff8b">A</text>
 <circle class="blink-slow" cx="892" cy="366" r="3" fill="#3dff8b"/>
-<text x="899" y="368" font-size="6" fill="#333">CV</text>
 <circle cx="938" cy="366" r="6" fill="#d23030" stroke="#666" stroke-width="1"/>
 <circle cx="956" cy="366" r="6" fill="#1c1c1c" stroke="#666" stroke-width="1"/>
 <circle cx="974" cy="366" r="6" fill="#1f8a3a" stroke="#666" stroke-width="1"/>
@@ -1018,9 +1025,9 @@
 <rect x="0" y="472" width="1200" height="28" fill="#03060d" />
 <rect x="0" y="472" width="1200" height="1" fill="#0f3a4a" />
 <g clip-path="url(#tickerClip)"><g class="ticker">
-<text x="16" y="491" font-size="12" fill="#3ee8ff" letter-spacing="1.5">● ONLINE  ·  BSc (Hons) ELECTRICAL ENGINEERING @ UNIVERSITY OF MORATUWA  ·  NOW BUILDING: NEOMOUSE V2 MICROMOUSE  ·  STACK: EMBEDDED C++ · PID · KiCad · MATLAB  ·  OPEN TO INTERNSHIPS &amp; COLLABORATIONS  ·  </text>
-<text x="1256" y="491" font-size="12" fill="#3ee8ff" letter-spacing="1.5">● ONLINE  ·  BSc (Hons) ELECTRICAL ENGINEERING @ UNIVERSITY OF MORATUWA  ·  NOW BUILDING: NEOMOUSE V2 MICROMOUSE  ·  STACK: EMBEDDED C++ · PID · KiCad · MATLAB  ·  OPEN TO INTERNSHIPS &amp; COLLABORATIONS  ·  </text>
-<text x="2496" y="491" font-size="12" fill="#3ee8ff" letter-spacing="1.5">● ONLINE  ·  BSc (Hons) ELECTRICAL ENGINEERING @ UNIVERSITY OF MORATUWA  ·  NOW BUILDING: NEOMOUSE V2 MICROMOUSE  ·  STACK: EMBEDDED C++ · PID · KiCad · MATLAB  ·  OPEN TO INTERNSHIPS &amp; COLLABORATIONS  ·  </text>
+<text x="20" y="491" font-size="12" fill="#3ee8ff" textLength="1200" lengthAdjust="spacingAndGlyphs">● ONLINE  ·  ELECTRICAL ENGINEERING @ UNIVERSITY OF MORATUWA  ·  NOW BUILDING: NEOMOUSE V2  ·  EMBEDDED C++ · PID · KiCad  ·  OPEN TO INTERNSHIPS  ·</text>
+<text x="1260" y="491" font-size="12" fill="#3ee8ff" textLength="1200" lengthAdjust="spacingAndGlyphs">● ONLINE  ·  ELECTRICAL ENGINEERING @ UNIVERSITY OF MORATUWA  ·  NOW BUILDING: NEOMOUSE V2  ·  EMBEDDED C++ · PID · KiCad  ·  OPEN TO INTERNSHIPS  ·</text>
+<text x="2500" y="491" font-size="12" fill="#3ee8ff" textLength="1200" lengthAdjust="spacingAndGlyphs">● ONLINE  ·  ELECTRICAL ENGINEERING @ UNIVERSITY OF MORATUWA  ·  NOW BUILDING: NEOMOUSE V2  ·  EMBEDDED C++ · PID · KiCad  ·  OPEN TO INTERNSHIPS  ·</text>
 </g></g>
 </g>
 <rect x="1" y="1" width="1198" height="498" rx="14" fill="none" stroke="#1f3358" stroke-width="2"/>
