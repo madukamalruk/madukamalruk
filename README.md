@@ -125,12 +125,12 @@ I turn engineering insights into scalable architectures, embedded systems, and r
 <br>
 
 <div align="center">
-  <a href="https://github.com/madukamalruk/Micromouse-V2.0"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/repo-Micromouse-V2.0.svg" alt="Micromouse-V2.0" /></a>
-  <a href="https://github.com/madukamalruk/uom-maze-solver-2025"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/repo-uom-maze-solver-2025.svg" alt="uom-maze-solver-2025" /></a>
-  <a href="https://github.com/madukamalruk/robo-mouse-v5-pcb"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/repo-robo-mouse-v5-pcb.svg" alt="robo-mouse-v5-pcb" /></a>
-  <a href="https://github.com/madukamalruk/Neo-Mouse-PCB"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/repo-Neo-Mouse-PCB.svg" alt="Neo-Mouse-PCB" /></a>
-  <a href="https://github.com/madukamalruk/jac-personal-planner"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/repo-jac-personal-planner.svg" alt="jac-personal-planner" /></a>
-  <a href="https://github.com/madukamalruk/AI-Hackathon-2026-V1"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/repo-AI-Hackathon-2026-V1.svg" alt="AI-Hackathon-2026-V1" /></a>
+  <a href="https://github.com/madukamalruk/Micromouse-V2.0"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/repo-Micromouse-V2.0.svg" alt="Micromouse-V2.0" /></a>
+  <a href="https://github.com/madukamalruk/uom-maze-solver-2025"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/repo-uom-maze-solver-2025.svg" alt="uom-maze-solver-2025" /></a>
+  <a href="https://github.com/madukamalruk/robo-mouse-v5-pcb"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/repo-robo-mouse-v5-pcb.svg" alt="robo-mouse-v5-pcb" /></a>
+  <a href="https://github.com/madukamalruk/Neo-Mouse-PCB"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/repo-Neo-Mouse-PCB.svg" alt="Neo-Mouse-PCB" /></a>
+  <a href="https://github.com/madukamalruk/jac-personal-planner"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/repo-jac-personal-planner.svg" alt="jac-personal-planner" /></a>
+  <a href="https://github.com/madukamalruk/AI-Hackathon-2026-V1"><img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/repo-AI-Hackathon-2026-V1.svg" alt="AI-Hackathon-2026-V1" /></a>
 </div>
 
 <br/>
@@ -141,9 +141,9 @@ I turn engineering insights into scalable architectures, embedded systems, and r
   <h2>🐍 My Contributions 🐍</h2>
   <br>
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/github-contribution-grid-snake-dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/github-contribution-grid-snake.svg">
-    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/github-contribution-grid-snake.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/github-contribution-grid-snake.svg">
   </picture>
   <br/><br/>
 </div>
@@ -161,8 +161,8 @@ I turn engineering insights into scalable architectures, embedded systems, and r
 
 <!-- Stats + languages: self-hosted, rebuilt every 3h (scripts/telemetry.py) -->
 <div align="center">
-  <img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/diagnostics.svg" alt="github stats" />
-  <img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output-v2/languages.svg" alt="top languages" />
+  <img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/diagnostics.svg" alt="github stats" />
+  <img width="48%" src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/languages.svg" alt="top languages" />
 </div>
 
 <br>
