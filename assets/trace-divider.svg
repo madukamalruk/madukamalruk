@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 28" width="1200" height="28" role="presentation">
+  <style>
+    .trace { fill: none; stroke: #1C2330; stroke-width: 1.5; }
+    .pulse { fill: none; stroke: #00E5FF; stroke-width: 2; stroke-linecap: round;
+             stroke-dasharray: 36 1164; animation: run 4.8s linear infinite; }
+    .pulse.b { animation-delay: -2.4s; stroke: #E0A84A; }
+    .pad { fill: #06070A; stroke: #00E5FF; stroke-width: 1.2; }
+    @keyframes run { from { stroke-dashoffset: 1200; } to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; opacity: 0; } }
+  </style>
+  <path class="trace" d="M0 14 H1200"/>
+  <path class="pulse" d="M0 14 H1200"/>
+  <path class="pulse b" d="M0 14 H1200"/>
+  <circle class="pad" cx="120" cy="14" r="4"/>
+  <circle class="pad" cx="360" cy="14" r="4"/>
+  <circle class="pad" cx="600" cy="14" r="4"/>
+  <circle class="pad" cx="840" cy="14" r="4"/>
+  <circle class="pad" cx="1080" cy="14" r="4"/>
+</svg>
