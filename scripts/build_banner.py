@@ -477,7 +477,7 @@ def hero() -> str:
     add('<rect x="726" y="335" width="30" height="3" fill="#3B4456"/>')
     add(f'<path d="M758 338 C764 338 764 344 770 344" stroke="{RED}" stroke-width="1.5" fill="none"/>')
     # MCU (QFP) + status LED
-    add('<rect x="772" y="336" width="26" height="10" rx="1" fill="#1E232D" stroke="#3A4558" stroke-width="1"/>')
+    add('<rect x="772" y="336" width="26" height="10" rx="1" fill="#0B0D11"/>')
     for k in range(6):
         add(f'<rect x="{774 + k * 4}" y="334" width="2" height="2" fill="{GOLD}"/>')
     add(f'<circle class="blink-slow" cx="804" cy="341" r="2.2" fill="{CYAN}" filter="url(#glowC)"/>')

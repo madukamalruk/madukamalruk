@@ -8,6 +8,6 @@ Format: date · decision · why · status. *Inferred* = reconstructed from code/
 4. **Animation via CSS/SMIL only, with no external fonts.** *Inferred*. Why: GitHub's `<img>` sandbox blocks JS and web fonts. Status: active.
 5. **Brand palette shared with madukamalruk.com.lk** (obsidian, cyan, copper/gold). *Inferred* (`build_banner.py` comment). Status: active.
 6. **Optional `METRICS_TOKEN` PAT**, falling back to `GITHUB_TOKEN`. *Inferred*. Why: lets private-repo languages count without being required. Status: active.
-7. **2026-11-18 · The committed `madukz-space.svg` is canonical;** the script will be aligned to it. Decided by the user during onboarding.
+7. **2026-11-18 · The committed `madukz-space.svg` is canonical;** the script was aligned to it (rebuild is now byte-identical). Decided by the user during onboarding.
 8. **2026-11-18 · Keep `backup/readme-before-redesign`** as a rollback point. Decided by the user.
 9. **2026-11-18 · Workflow docs (`CLAUDE.md`, `docs/`) live in this public repo.** Decided by the user; they don't show on the profile page.
