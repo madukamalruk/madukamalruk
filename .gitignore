@@ -1,2 +1,7 @@
 dist/
 __pycache__/
+
+# secrets / local Claude settings
+.env*
+!.env.example
+.claude/settings.local.json
