@@ -5,7 +5,10 @@
   </a>
 </div>
 
-<h1 align="center">Maduka Malruk</h1>
+<!-- Animated Typing Header -->
+<div align="center">
+  <img src="https://readme-typing-svg.demolab.com/?font=Space+Grotesk&weight=600&size=35&center=true&vCenter=true&width=600&height=70&duration=4000&color=00E5FF&lines=Welcome+Aboard!+%F0%9F%91%8B;+I'm+Maduka+Malruk!;+Electrical+Engineer+%E2%9A%A1;+Robotics+Enthusiast+%F0%9F%A4%96" alt="I'm Maduka Malruk!" />
+</div>
 <p align="center"><code>Electrical Engineering · University of Moratuwa · Sri Lanka</code></p>
 
 <table align="center">
