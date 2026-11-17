@@ -24,7 +24,6 @@
 
 I design the robots, the boards that run them, and the firmware in between: schematic and 4-layer PCB, STM32 and Arduino firmware, PID wall-following, and flood-fill navigation. My current build is the micromouse for **Team MazeRiders**, which took **1st place at InnovMind v3.0 (June 2026)** and reached the **MazeMaster 2026 Top 5**.
 
-Outside the lab I'm an active member of the **Electrical Engineering Society (EESoc)**. Hiking and camping across Sri Lanka (Knuckles, Raksagala, Hantane) and mobile and portrait photography keep me sane between boards.
 
 <p align="center"><img src="assets/trace-divider.svg" width="100%" alt="" /></p>
 
@@ -171,7 +170,7 @@ flowchart LR
 | Jun 2026 | InnovMind v3.0 Micromouse Competition | **1st place**, Team MazeRiders |
 | 2026 | MazeMaster 2026 | **Top 5 finalist** |
 | 2026 | SLIoT Challenge 2026 (University category) | Proposed and built a Raspberry Pi 4 IoT hidden-camera detector |
-| Ongoing | Electrical Engineering Society (EESoc) | Active member |
+
 
 <p align="center"><img src="assets/trace-divider.svg" width="100%" alt="" /></p>
 
