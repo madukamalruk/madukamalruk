@@ -36,7 +36,7 @@ FEATURED = [
     "robo-mouse-v5-pcb",
     "Neo-Mouse-PCB",
     "jac-personal-planner",
-    "AI-Hackathon-2026-V1",
+    "unipathlk-v1",
 ]
 # notebooks / generated markup dwarf real source code in byte counts
 LANG_EXCLUDE = {"Jupyter Notebook", "HTML", "CSS", "TeX", "Makefile", "CMake", "Batchfile"}

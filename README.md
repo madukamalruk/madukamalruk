@@ -156,7 +156,7 @@ Live cards are rebuilt every 3 hours from the GitHub API and served from the `ou
 <sub><b>Jac Personal Planner</b> · full-stack Jac · object-spatial graph of task, event and habit nodes · ByLLM agent walkers for scheduling and reflection · web + mobile front ends</sub>
 </td>
 <td width="50%" valign="top">
-<a href="https://github.com/madukamalruk/AI-Hackathon-2026-V1"><img src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/repo-AI-Hackathon-2026-V1.svg" width="100%" alt="AI-Hackathon-2026-V1" /></a>
+<a href="https://github.com/madukamalruk/unipathlk-v1"><img src="https://raw.githubusercontent.com/madukamalruk/madukamalruk/output/repo-unipathlk-v1.svg" width="100%" alt="unipathlk-v1" /></a>
 <sub><b>UniPath LK</b> · Jac 0.16.7 object-spatial walkers over 37 verified programmes · ByLLM planner with a deterministic rules fallback · AI Hackathon 2026 submission</sub>
 </td>
 </tr>
