@@ -129,8 +129,6 @@ flowchart LR
 
 ## 03 · Build Log
 
-Live cards are rebuilt every 3 hours from the GitHub API and served from the `output` branch.
-
 <table>
 <tr>
 <td width="50%" valign="top">
